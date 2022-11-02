@@ -23,10 +23,10 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('📢 Updates Channel', url='https://telegram.me/UK_Studios_Official')
+                InlineKeyboardButton('📢 Update Channel', url='https://telegram.me/UK_Studios_Official')
             ],
             [
-                InlineKeyboardButton('☺️ Subscribe', url=f"https://youtube.com/c/GreyMattersBot"),
+                InlineKeyboardButton('☺️ Subscribe', url=f"https://youtube.com/channel/UCpF-d70K9h7IpaHsFuJiMYQ"),
             ],
             [
                 InlineKeyboardButton(text=DOWNLOAD_TEXT_NAME,url=DOWNLOAD_TEXT_URL)
@@ -47,8 +47,8 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('Add me to Your Group', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('Subscribe', url='https://youtube.com/c/GreyMattersBot'),
-            InlineKeyboardButton('🤖 Bot Update Channel 🤖', url='https://t.me/UK_Studios_Official')
+            InlineKeyboardButton('☺️ Subscribe' , url='https://youtube.com/channel/UCpF-d70K9h7IpaHsFuJiMYQ'),
+            InlineKeyboardButton('📢 Update Channel', url='https://t.me/UK_Studios_Official')
             ],[
             InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
             InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
