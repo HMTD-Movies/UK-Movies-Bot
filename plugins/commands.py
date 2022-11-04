@@ -84,7 +84,7 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton(" 🔄 Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="<b>Hello 👋 {first}💗</b>
+            text="<b>Hello {u.mention}💗</b>
 <b>Join Our Movie Updates Channel To Use Me ☺️
 You Need to Join Our Channel to Use me
 Kindly Please Join Our Channel</b>",
