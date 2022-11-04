@@ -109,12 +109,12 @@ async def disable_chat(bot, message):
     await message.reply('Chat Successfully Disabled')
     try:
         buttons = [[
-            InlineKeyboardButton('𝚂𝚄𝙿𝙿𝙾𝚁𝚃', url=f'https://t.me/{SUPPORT_CHAT}')
+            InlineKeyboardButton('👥 Suppot', url=f'https://t.me/{SUPPORT_CHAT}')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat_, 
-            text=f'<b>Hello Friends, \nMy admin has told me to leave from group so i go! If you wanna add me again contact my support group.</b> \nReason : <code>{reason}</code>',
+            text=f'<b>Hello Friends, \nMy Admin has told me to Leave From Group. So I go! If you Wanna Add me Again Contact my Support Group. \nReason :</b> <code>{reason}</code>',
             reply_markup=reply_markup)
         await bot.leave_chat(chat_)
     except Exception as e:
@@ -124,25 +124,25 @@ async def disable_chat(bot, message):
 @Client.on_message(filters.command('enable') & filters.user(ADMINS))
 async def re_enable_chat(bot, message):
     if len(message.command) == 1:
-        return await message.reply('Give me a chat id')
+        return await message.reply('**Give Me a Chat 🆔**')
     chat = message.command[1]
     try:
         chat_ = int(chat)
     except:
-        return await message.reply('Give Me A Valid Chat ID')
+        return await message.reply('**Give Me A Valid Chat 🆔**')
     sts = await db.get_chat(int(chat))
     if not sts:
-        return await message.reply("Chat Not Found In DB !")
+        return await message.reply("**Chat Not Found In DB!**")
     if not sts.get('is_disabled'):
-        return await message.reply('This chat is not yet disabled.')
+        return await message.reply('**This chat is Not Yet Disabled.**')
     await db.re_enable_chat(int(chat_))
     temp.BANNED_CHATS.remove(int(chat_))
-    await message.reply("Chat Successfully re-enabled")
+    await message.reply("**Chat Successfully re-enabled**")
 
 
 @Client.on_message(filters.command('stats') & filters.incoming)
 async def get_ststs(bot, message):
-    rju = await message.reply('<b>𝙰𝙲𝙲𝙴𝚂𝚂𝙸𝙽𝙶 𝚂𝚃𝙰𝚃𝚄𝚂 𝙳𝙴𝚃𝙰𝙸𝙻𝚂...</b>')
+    rju = await message.reply('<b>Accesing𝙰𝙲𝙲𝙴𝚂𝚂𝙸𝙽𝙶 𝚂𝚃𝙰𝚃𝚄𝚂 𝙳𝙴𝚃𝙰𝙸𝙻𝚂...</b>')
     total_users = await db.total_users_count()
     totl_chats = await db.total_chat_count()
     files = await Media.count_documents()
