@@ -96,11 +96,11 @@ async def next_page(bot, query):
             [
                 InlineKeyboardButton(
                     text=f"[{get_size(file.file_size)}] {file.file_name}", 
-                    url=await get_shortlink(f"https://t.me/{temp.U_NAME}?start=files_{file.file_id}")
+                    url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
                 ),
                 InlineKeyboardButton(
                     text=f"[{get_size(file.file_size)}] {file.file_name}", 
-                    url=await get_shortlink(f"https://t.me/{temp.U_NAME}?start=files_{file.file_id}")
+                    url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
                 ),
             ]
             for file in files
@@ -185,14 +185,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     chat = await client.get_chat(grpid)
                     title = chat.title
                 except:
-                    await query.message.edit_text("Make sure I'm present in your group!!", quote=True)
-                    return await query.answer('𝙿𝙻𝙴𝙰𝚂𝙴 𝚂𝙷𝙰𝚁𝙴 𝙰𝙽𝙳 𝚂𝚄𝙿𝙿𝙾𝚁𝚃')
+                    await query.message.edit_text("**Make sure I'm present in your group!!**", quote=True)
+                    return await query.answer('**Share and Support us ❤️**')
             else:
                 await query.message.edit_text(
-                    "I'm not connected to any groups!\nCheck /connections or connect to any groups",
+                    "**I'm not connected to any groups!\nCheck /connections or connect to any groups**",
                     quote=True
                 )
-                return await query.answer('𝙿𝙻𝙴𝙰𝚂𝙴 𝚂𝙷𝙰𝚁𝙴 𝙰𝙽𝙳 𝚂𝚄𝙿𝙿𝙾𝚁𝚃')
+                return await query.answer('**Share and Support us ❤️**')
 
         elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
             grp_id = query.message.chat.id
@@ -274,7 +274,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         else:
             await query.message.edit_text('**Some error occurred!!**', parse_mode=enums.ParseMode.MARKDOWN)
-        return await query.answer('Share and Support us ❤️')
+        return await query.answer('**Share and Support us ❤️**')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -297,7 +297,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"**Some error occurred!!**",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('Share and Support us ❤️')
+        return await query.answer('**Share and Support us ❤️**')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -315,7 +315,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"**Some error occurred!!**",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('Share and Support us ❤️')
+        return await query.answer('**Share and Support us ❤️**')
     elif query.data == "backcb":
         await query.answer()
 
@@ -326,7 +326,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(
                 "**There are no active connections!! Connect to some groups first.**",
             )
-            return await query.answer('Share and Support us ❤️')
+            return await query.answer('**Share and Support us ❤️**')
         buttons = []
         for groupid in groupids:
             try:
@@ -435,11 +435,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('⚡ SUBSCᏒIBΞ ⚡', url='https://youtube.com/c/GreyMattersBot'),
-            InlineKeyboardButton('🤖 UᎮDΛTΞS 🤖', url='https://t.me/greymatter_bots')
+            InlineKeyboardButton('☺️ Subscribe', url='https://youtube.com/c/GreyMattersBot'),
+            InlineKeyboardButton('📢 Update Channel', url='https://t.me/UK_Studios_Official')
         ], [
-            InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
-            InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
+            InlineKeyboardButton('😎 Help', callback_data='help'),
+            InlineKeyboardButton('😁 About', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -450,13 +450,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer('𝙿𝙻𝙴𝙰𝚂𝙴 𝚂𝙷𝙰𝚁𝙴 𝙰𝙽𝙳 𝚂𝚄𝙿𝙿𝙾𝚁𝚃')
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('𝙼𝙰𝙽𝚄𝙴𝙻 𝙵𝙸𝙻𝚃𝙴𝚁', callback_data='manuelfilter'),
-            InlineKeyboardButton('𝙰𝚄𝚃𝙾 𝙵𝙸𝙻𝚃𝙴𝚁', callback_data='autofilter')
+            InlineKeyboardButton('Manuel Filter', callback_data='manuelfilter'),
+            InlineKeyboardButton('Auto Filter', callback_data='autofilter')
         ], [
-            InlineKeyboardButton('𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽𝚂', callback_data='coct'),
-            InlineKeyboardButton('𝙴𝚇𝚃𝚁𝙰 𝙼𝙾D𝚂', callback_data='extra')
+            InlineKeyboardButton('Connections', callback_data='coct'),
+            InlineKeyboardButton('Extra Mods', callback_data='extra')
         ], [
-            InlineKeyboardButton('🏠 H𝙾𝙼𝙴 🏠', callback_data='start'),
+            InlineKeyboardButton('🏠 Home 🏠', callback_data='start'),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -466,7 +466,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🏠 H𝙾𝙼𝙴 🏠', callback_data='start'),
+            InlineKeyboardButton('🏠 Home 🏠', callback_data='start'),
          ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -476,7 +476,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('👩‍🦯 𝙱𝙰𝙲𝙺', callback_data='about')
+            InlineKeyboardButton('⬅️ Back', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -486,8 +486,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "manuelfilter":
         buttons = [[
-            InlineKeyboardButton('👩‍🦯 𝙱𝙰𝙲𝙺', callback_data='help'),
-            InlineKeyboardButton('⏹️ 𝙱𝚄𝚃𝚃𝙾𝙽𝚂', callback_data='button')
+            InlineKeyboardButton('⬅️' Back, callback_data='help'),
+            InlineKeyboardButton('⏹️ Buttons', callback_data='button')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -497,7 +497,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "button":
         buttons = [[
-            InlineKeyboardButton('👩‍🦯 𝙱𝙰𝙲𝙺', callback_data='manuelfilter')
+            InlineKeyboardButton('⬅️ Back', callback_data='manuelfilter')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -507,7 +507,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "autofilter":
         buttons = [[
-            InlineKeyboardButton('👩‍🦯 𝙱𝙰𝙲𝙺', callback_data='help')
+            InlineKeyboardButton('⬅️ Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
