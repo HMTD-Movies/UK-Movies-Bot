@@ -15,7 +15,23 @@ class script(object):
     START_TXT = environ.get("START_TXT", '''<b>Hello {} 👋🏻 I'm an UK Studios Official Auto Filter Bot (Movie Search Bot) Maintained by @UK_Studios_Official. We are Providing Tamil and Tamil Dubbed Movies. More Languages Coming Soon. I Can Support Upto 4GB File. You Can Get added Files GDrive Links and 4GB above Links also. You Can Get GDrive Links in www.HMTDMovies.tk Keep me Join to Our Official Channel to Receive Bot & Movies Updates in @UK_Studios_Official. Check "😁 About" Button.</b>''')
     HELP_TXT = """<b>Hi {}
 I have that Features.</b>"""
-    ABOUT_TXT = """<b>🤖 My Name : <a href='https://t.me/UK_Auto_Filter_Bot'>UK Auto Filter Bot</a>\n\n🧑🏻‍💻 Developer : <a href='https://HMTDMovies.tk/'>Karthik</a>\n\n📝 Language : <a href='https://www.python.org/'>Python3</a>\n\n📚 Library : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio {version}</a>\n\n📡 Hosted on : <a href='https://www.hostinger.in'>VPS</a>\n\n🌐 Website : <a href='https://HMTDMovies.tk/'>HMTD Movies</a>\n\n🧑🏻‍ Feedback : <a href='https://t.me/HMTD_Feedback_Bot'>Feedback Bot</a>\n\n📢 Updates Channel : <a href='https://t.me/UK_Studios_Official'>UK Studios Official</a>\n\n👥 Discussion Group : <a href='https://t.me/HMTD_Discussion_Group'>Discussion Group</a></b>"""
+    ABOUT_TXT = """<b>🤖 My Name : <a href='https://t.me/UK_Auto_Filter_Bot'>UK Auto Filter Bot</a>
+
+🧑🏻‍💻 Developer : <a href='https://HMTDMovies.tk/'>Karthik</a>
+
+📝 Language : <a href='https://www.python.org/'>Python3</a>
+
+📚 Library : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio {version}</a>
+
+📡 Hosted on : <a href='https://www.hostinger.in'>VPS</a>
+
+🌐 Website : <a href='https://HMTDMovies.tk/'>HMTD Movies</a>
+
+🧑🏻‍ Feedback : <a href='https://t.me/HMTD_Feedback_Bot'>Feedback Bot</a>
+
+📢 Updates Channel : <a href='https://t.me/UK_Studios_Official'>UK Studios Official</a>
+
+👥 Discussion Group : <a href='https://t.me/HMTD_Discussion_Group'>Discussion Group</a></b>"""
     SOURCE_TXT = """<b>Create One Like This:</b>
 » I will Create One Bot For You. But Paid<b>
 » Contact Me @HMTD_Karthik<b>"""
