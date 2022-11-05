@@ -14,14 +14,14 @@ class script(object):
     HOME_BUTTONURL_UPDATES = environ.get("HOME_BUTTONURL_UPDATES", 'https://mdiskpro.xyz/ref/Karthik')
     START_TXT = environ.get("START_TXT", '''<b>Hello {} 👋🏻 I'm an UK Studios Official Auto Filter Bot (Movie Search Bot) Maintained by @UK_Studios_Official. We are Providing Tamil and Tamil Dubbed Movies. More Languages Coming Soon. I Can Support Upto 4GB File. You Can Get added Files GDrive Links and 4GB above Links also. You Can Get GDrive Links in www.HMTDMovies.tk Keep me Join to Our Official Channel to Receive Bot & Movies Updates in @UK_Studios_Official. Check "😁 About" Button.''')
     HELP_TXT = """**Hi {}
-𝙷𝙴𝚁𝙴 𝙸𝚂 𝙼𝚈 𝙷𝙴𝙻𝙿 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂.**"""
+I have that Features.**"""
     ABOUT_TXT = """<b>🤖 My Name : <a href='https://t.me/UK_Auto_Filter_Bot'>UK Auto Filter Bot</a>\n\n🧑🏻‍💻 Developer : <a href='https://HMTDMovies.tk/'>Karthik</a>\n\n📝 Language : <a href='https://www.python.org/'>Python3</a>\n\n📚 Library : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio {version}</a>\n\n📡 Hosted on : <a href='https://www.hostinger.in'>VPS</a>\n\n🌐 Website : <a href='https://HMTDMovies.tk/'>HMTD Movies</a>\n\n🧑🏻‍ Feedback : <a href='https://t.me/HMTD_Feedback_Bot'>Feedback Bot</a>\n\n📢 Updates Channel : <a href='https://t.me/UK_Studios_Official'>UK Studios Official</a>\n\n👥 Discussion Group : <a href='https://t.me/HMTD_Discussion_Group'>Discussion Group</a></b>"""
     SOURCE_TXT = """<b>Create One Like This:</b>
 » I will Create One Bot For You. But Paid<b>
 » Contact Me @HMTD_Karthik<b>"""
-    MANUELFILTER_TXT = """Help: <b>Filters</b>
+    MANUELFILTER_TXT = """**Help:** <b>Filters</b>
 
-- Filter is the feature were users can set automated replies for a particular keyword and Search Bot will respond whenever a keyword is found the message
+**- Filter is the feature were users can set automated replies for a particular keyword and Search Bot will respond whenever a keyword is found the message**
 
 <b>NOTE:</b>
 <b>1. Search Bot should have admin privillage.
@@ -67,16 +67,16 @@ class script(object):
 <b>• /connect  - connect a particular chat to your PM
 • /disconnect  - disconnect from a chat
 • /connections - list all your connections</b>"""
-    EXTRAMOD_TXT = """Help: <b>Extra Modules</b>
+    EXTRAMOD_TXT = """**Help:** <b>Extra Modules</b>
 
 <b>NOTE:</b>
 <b>these are the extra features of Auto Filter Bot (Movie Search Bot)</b>
 
 <b>Commands and Usage:</b>
-• /id - <code>get id of a specified user.</code>
-• /info  - <code>get information about a user.</code>
-• /imdb  - <code>get the film information from IMDb source.</code>
-• /search  - <code>get the film information from various sources.</code>"""
+<b>• /id - get id of a specified user.
+• /info  - get information about a user.
+• /imdb  - get the film information from IMDb source.
+• /search  - get the film information from various sources.</b>"""
     ADMIN_TXT = """Help: <b>Admin mods</b>
 
 <b>NOTE:</b>
