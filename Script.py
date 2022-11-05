@@ -31,7 +31,7 @@ I have that Features.</b>"""
 
 📢 Updates Channel : <a href='https://t.me/UK_Studios_Official'>UK Studios Official</a>
 
-👥 Discussion Group : <a href='https://t.me/HMTD_Discussion_Group'>Discussion Group</a></i></b>"""
+👥 Discussion Group : <a href='https://t.me/HMTD_Discussion_Group'>Discussion Group</a></b></i>"""
     SOURCE_TXT = """<b>Create One Like This:</b>
 » I will Create One Bot For You. But Paid<b>
 » Contact Me @HMTD_Karthik<b>"""
