@@ -80,33 +80,33 @@ I have that Features.**"""
     ADMIN_TXT = """Help: <b>Admin mods</b>
 
 <b>NOTE:</b>
-This module only works for my admins
+**This module only works for my admins**
 
 <b>Commands and Usage:</b>
-• /logs - <code>to get the rescent errors</code>
-• /stats - <code>to get status of files in db.</code>
-• /delete - <code>to delete a specific file from db.</code>
-• /users - <code>to get list of my users and ids.</code>
-• /chats - <code>to get list of the my chats and ids </code>
-• /leave  - <code>to leave from a chat.</code>
-• /disable  -  <code>do disable a chat.</code>
-• /ban  - <code>to ban a user.</code>
-• /unban  - <code>to unban a user.</code>
-• /channel - <code>to get list of total connected channels</code>
-• /broadcast - <code>to broadcast a message to all users</code>"""
-    STATUS_TXT = """★ 𝚃𝙾𝚃𝙰𝙻 𝙵𝙸𝙻𝙴𝚂: <code>{}</code>
-★ 𝚃𝙾𝚃𝙰𝙻 𝚄𝚂𝙴𝚁𝚂: <code>{}</code>
-★ 𝚃𝙾𝚃𝙰𝙻 𝙲𝙷𝙰𝚃𝚂: <code>{}</code>
-★ 𝚄𝚂𝙴𝙳 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: <code>{}</code> 𝙼𝚒𝙱
-★ 𝙵𝚁𝙴𝙴 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: <code>{}</code> 𝙼𝚒𝙱"""
-    LOG_TEXT_G = """#𝐍𝐞𝐰𝐆𝐫𝐨𝐮𝐩
+<b>• /logs - to get the rescent errors
+• /stats - to get status of files in db.
+• /delete - to delete a specific file from db.
+• /users - to get list of my users and ids.
+• /chats - to get list of the my chats and ids 
+• /leave  - to leave from a chat.
+• /disable  -  do disable a chat.
+• /ban  - to ban a user.
+• /unban  - to unban a user.
+• /channel - to get list of total connected channels
+• /broadcast - to broadcast a message to all users</b>"""
+    STATUS_TXT = """♦️ Total Files : <code>{}</code>
+♦️ Total Users : <code>{}</code>
+♦️ Total Chats : <code>{}</code>
+♦️ Used Storage : <code>{}</code> 𝙼𝚒𝙱
+♦️ Free Storage : <code>{}</code> 𝙼𝚒𝙱"""
+    LOG_TEXT_G = """**#New Group**
     
-<b>᚛› 𝐆𝐫𝐨𝐮𝐩 ⪼ {}(<code>{}</code>)</b>
-<b>᚛› 𝐓𝐨𝐭𝐚𝐥 𝐌𝐞𝐦𝐛𝐞𝐫𝐬 ⪼ <code>{}</code></b>
-<b>᚛› 𝐀𝐝𝐝𝐞𝐝 𝐁𝐲 ⪼ {}</b>
+<b>᚛› Group ⪼ {}(<code>{}</code>)</b>
+<b>᚛› Total Members ⪼ <code>{}</code></b>
+<b>᚛› Added By ⪼ {}</b>
 """
-    LOG_TEXT_P = """#𝐍𝐞𝐰𝐔𝐬𝐞𝐫  
+    LOG_TEXT_P = """**#New User**
     
-<b>᚛› 𝐈𝐃 - <code>{}</code></b>
-<b>᚛› 𝐍𝐚𝐦𝐞 - {}</b>
+<b>᚛› ID - <code>{}</code></b>
+<b>᚛› Name - {}</b>
 """
