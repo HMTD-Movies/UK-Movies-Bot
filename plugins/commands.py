@@ -45,7 +45,7 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('Add me to Your Group', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('©️ Add me to Your Group', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('☺️ Subscribe' , url='https://youtube.com/channel/UCpF-d70K9h7IpaHsFuJiMYQ'),
             InlineKeyboardButton('📢 Update Channel', url='https://t.me/UK_Studios_Official')
@@ -84,7 +84,7 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton(" 🔄 Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**Hello {u.mention}💗\nJoin Our Movie Updates Channel To Use Me ☺️**",
+            text="<b>Hello {u.mention}💗\nJoin Our Movie Updates Channel To Use Me ☺️**",
 You Need to Join Our Channel to Use me
 Kindly Please Join Our Channel</b>",
             reply_markup=InlineKeyboardMarkup(btn),
