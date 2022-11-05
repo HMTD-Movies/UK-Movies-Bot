@@ -15,7 +15,7 @@ class script(object):
     START_TXT = environ.get("START_TXT", '''<b>Hello {} 👋🏻 I'm an UK Studios Official Auto Filter Bot (Movie Search Bot) Maintained by @UK_Studios_Official. We are Providing Tamil and Tamil Dubbed Movies. More Languages Coming Soon. I Can Support Upto 4GB File. You Can Get added Files GDrive Links and 4GB above Links also. You Can Get GDrive Links in www.HMTDMovies.tk Keep me Join to Our Official Channel to Receive Bot & Movies Updates in @UK_Studios_Official. Check "😁 About" Button.</b>''')
     HELP_TXT = """<b>Hi {}
 I have that Features.</b>"""
-    ABOUT_TXT = """<b>🤖 My Name : <a href='https://t.me/UK_Auto_Filter_Bot'>UK Auto Filter Bot</a>
+    ABOUT_TXT = """<b><i>🤖 My Name : <a href='https://t.me/UK_Auto_Filter_Bot'>UK Auto Filter Bot</a>
 
 🧑🏻‍💻 Developer : <a href='https://HMTDMovies.tk/'>Karthik</a>
 
@@ -31,7 +31,7 @@ I have that Features.</b>"""
 
 📢 Updates Channel : <a href='https://t.me/UK_Studios_Official'>UK Studios Official</a>
 
-👥 Discussion Group : <a href='https://t.me/HMTD_Discussion_Group'>Discussion Group</a></b>"""
+👥 Discussion Group : <a href='https://t.me/HMTD_Discussion_Group'>Discussion Group</a></i></b>"""
     SOURCE_TXT = """<b>Create One Like This:</b>
 » I will Create One Bot For You. But Paid<b>
 » Contact Me @HMTD_Karthik<b>"""
@@ -63,14 +63,14 @@ I have that Features.</b>"""
 
 <b>Alert buttons:</b>
 <code>[Button Text](buttonalert:This is an alert message)</code>"""
-    AUTOFILTER_TXT = """Help: <b>Auto Filter</b>
+    AUTOFILTER_TXT = """<b>Help :</b> <b>Auto Filter</b>
 
 <b>NOTE:</b>
 <b>1. Make me the admin of your channel if it's private.
 2. make sure that your channel does not contains camrips, porn and fake files.
 3. Forward the last message to me with quotes.
  I'll add all the files in that channel to my db.</b>"""
-    CONNECTION_TXT = """Help: <b>Connections</b>
+    CONNECTION_TXT = """<b>Help :</b> <b>Connections</b>
 
 <b>- Used to connect bot to PM for managing filters 
 - it helps to avoid spamming in groups.</b>
@@ -93,7 +93,7 @@ I have that Features.</b>"""
 • /info  - get information about a user.
 • /imdb  - get the film information from IMDb source.
 • /search  - get the film information from various sources.</b>"""
-    ADMIN_TXT = """Help: <b>Admin mods</b>
+    ADMIN_TXT = """<b>Help :</b> <b>Admin mods</b>
 
 <b>NOTE:</b>
 <b>This module only works for my admins</b>
