@@ -65,7 +65,7 @@ async def start(client, message):
         try:
             invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
         except ChatAdminRequired:
-            logger.error("Make sure Bot is Admin in Forcesub Channel")
+            logger.error("**Make sure Bot is Admin in Forcesub Channel**")
             return
         btn = [
             [
@@ -84,7 +84,7 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton(" 🔄 Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**Hello {u.mention}💗\nJoin Our Movie Updates Channel To Use Me ☺️**"
+            text="**Hello {u.mention}💗\nJoin Our Movie Updates Channel To Use Me ☺️**",
 You Need to Join Our Channel to Use me
 Kindly Please Join Our Channel</b>",
             reply_markup=InlineKeyboardMarkup(btn),
