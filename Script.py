@@ -12,16 +12,16 @@ def is_enabled(value, default):
 
 class script(object):
     HOME_BUTTONURL_UPDATES = environ.get("HOME_BUTTONURL_UPDATES", 'https://mdiskpro.xyz/ref/Karthik')
-    START_TXT = environ.get("START_TXT", '''<b>Hello {} 👋🏻 I'm an UK Studios Official Auto Filter Bot (Movie Search Bot) Maintained by @UK_Studios_Official. We are Providing Tamil and Tamil Dubbed Movies. More Languages Coming Soon. I Can Support Upto 4GB File. You Can Get added Files GDrive Links and 4GB above Links also. You Can Get GDrive Links in www.HMTDMovies.tk Keep me Join to Our Official Channel to Receive Bot & Movies Updates in @UK_Studios_Official. Check "😁 About" Button.''')
-    HELP_TXT = """**Hi {}
-I have that Features.**"""
+    START_TXT = environ.get("START_TXT", '''<b>Hello {} 👋🏻 I'm an UK Studios Official Auto Filter Bot (Movie Search Bot) Maintained by @UK_Studios_Official. We are Providing Tamil and Tamil Dubbed Movies. More Languages Coming Soon. I Can Support Upto 4GB File. You Can Get added Files GDrive Links and 4GB above Links also. You Can Get GDrive Links in www.HMTDMovies.tk Keep me Join to Our Official Channel to Receive Bot & Movies Updates in @UK_Studios_Official. Check "😁 About" Button.</b>''')
+    HELP_TXT = """<b>Hi {}
+I have that Features.</b>"""
     ABOUT_TXT = """<b>🤖 My Name : <a href='https://t.me/UK_Auto_Filter_Bot'>UK Auto Filter Bot</a>\n\n🧑🏻‍💻 Developer : <a href='https://HMTDMovies.tk/'>Karthik</a>\n\n📝 Language : <a href='https://www.python.org/'>Python3</a>\n\n📚 Library : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio {version}</a>\n\n📡 Hosted on : <a href='https://www.hostinger.in'>VPS</a>\n\n🌐 Website : <a href='https://HMTDMovies.tk/'>HMTD Movies</a>\n\n🧑🏻‍ Feedback : <a href='https://t.me/HMTD_Feedback_Bot'>Feedback Bot</a>\n\n📢 Updates Channel : <a href='https://t.me/UK_Studios_Official'>UK Studios Official</a>\n\n👥 Discussion Group : <a href='https://t.me/HMTD_Discussion_Group'>Discussion Group</a></b>"""
     SOURCE_TXT = """<b>Create One Like This:</b>
 » I will Create One Bot For You. But Paid<b>
 » Contact Me @HMTD_Karthik<b>"""
-    MANUELFILTER_TXT = """**Help:** <b>Filters</b>
+    MANUELFILTER_TXT = """<b>Help :</b> <b>Filters</b>
 
-**- Filter is the feature were users can set automated replies for a particular keyword and Search Bot will respond whenever a keyword is found the message**
+<b>- Filter is the feature were users can set automated replies for a particular keyword and Search Bot will respond whenever a keyword is found the message</b>
 
 <b>NOTE:</b>
 <b>1. Search Bot should have admin privillage.
@@ -33,9 +33,9 @@ I have that Features.**"""
 • /filters - list all the filters of a chat
 • /del - delete a specific filter in chat
 • /delall - delete the whole filters in a chat (chat owner only)</b>"""
-    BUTTON_TXT = """Help: <b>Buttons</b>
+    BUTTON_TXT = """<b>Help :</b> <b>Buttons</b>
 
-- Search Bot Supports both url and alert inline buttons.
+<b>- Search Bot Supports both url and alert inline buttons.</b>
 
 <b>NOTE:</b>
 <b>1. Telegram will not allows you to send buttons without any content, so content is mandatory.
@@ -67,7 +67,7 @@ I have that Features.**"""
 <b>• /connect  - connect a particular chat to your PM
 • /disconnect  - disconnect from a chat
 • /connections - list all your connections</b>"""
-    EXTRAMOD_TXT = """**Help:** <b>Extra Modules</b>
+    EXTRAMOD_TXT = """<b>Help :</b> <b>Extra Modules</b>
 
 <b>NOTE:</b>
 <b>these are the extra features of Auto Filter Bot (Movie Search Bot)</b>
@@ -80,7 +80,7 @@ I have that Features.**"""
     ADMIN_TXT = """Help: <b>Admin mods</b>
 
 <b>NOTE:</b>
-**This module only works for my admins**
+<b>This module only works for my admins</b>
 
 <b>Commands and Usage:</b>
 <b>• /logs - to get the rescent errors
@@ -99,13 +99,13 @@ I have that Features.**"""
 ♦️ Total Chats : <code>{}</code>
 ♦️ Used Storage : <code>{}</code> 𝙼𝚒𝙱
 ♦️ Free Storage : <code>{}</code> 𝙼𝚒𝙱"""
-    LOG_TEXT_G = """**#New Group**
+    LOG_TEXT_G = """<b>#New Group</b>
     
 <b>᚛› Group ⪼ {}(<code>{}</code>)</b>
 <b>᚛› Total Members ⪼ <code>{}</code></b>
 <b>᚛› Added By ⪼ {}</b>
 """
-    LOG_TEXT_P = """**#New User**
+    LOG_TEXT_P = """<b>#New User</b>
     
 <b>᚛› ID - <code>{}</code></b>
 <b>᚛› Name - {}</b>
