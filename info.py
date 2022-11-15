@@ -17,7 +17,7 @@ API_HASH = environ.get('API_HASH', '5264bf4663e9159565603522f58d3c18')
 BOT_TOKEN = environ.get('BOT_TOKEN', "5133369293:AAFuyy7kqv3Ml5PwCprmnW0OpGyEoiMinfc")
 
 # Bot settings
-CACHE_TIME = int(environ.get('CACHE_TIME', 600))
+CACHE_TIME = int(environ.get('CACHE_TIME', 1000))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/9b367594578b6d6a35e27.jpg')).split()
 
@@ -72,7 +72,7 @@ URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'droplink.co')
 URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '1d85e33efc4969b36e0f6c0a017aaaefd8accccc')
 
      # Auto Delete For Group Message (Self Delete) #
-SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 600))
+SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 1000))
 SELF_DELETE = environ.get('SELF_DELETE', True)
 if SELF_DELETE == "True":
     SELF_DELETE = True
