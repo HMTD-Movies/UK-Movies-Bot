@@ -11,8 +11,8 @@ def is_enabled(value, default):
         return default
 
 class script(object):
-    HOME_BUTTONURL_UPDATES = environ.get("HOME_BUTTONURL_UPDATES", 'https://beingtek.com/ref/KarthikUK')
-    START_TXT = environ.get("START_TXT", '''<b>Hello {} 👋🏻 I'm an UK Studios Official Auto Filter Bot (Movie Search Bot) Maintained by @UK_Studios_Official. We are Providing Tamil and Tamil Dubbed Movies. More Languages Coming Soon. I Can Support Upto 4GB File. You Can Get added Files GDrive Links and 4GB above Links also. You Can Get GDrive Links in www.HMTDMovies.tk. Keep me Join to Our Official Channel to Receive Bot & Movies Updates in @UK_Studios_Official. Check "😁 About" Button.</b>''')
+    HOME_BUTTONURL_UPDATES = environ.get("HOME_BUTTONURL_UPDATES", 'https://droplink.co/ref/KarthikUK')
+    START_TXT = environ.get("START_TXT", '''<b>Hello {} 👋🏻 I'm an UK Studios Official Auto Filter Bot (Movie Search Bot) Maintained by [UK Studios Official](https://t.me/UK_Studios_Official). We are Providing Tamil and Tamil Dubbed Movies. More Languages Coming Soon. I Can Support Upto 4GB File. You Can Get added Files GDrive Links and 4GB above Links also. You Can Get GDrive Links in [www.HMTDMovies.tk](http://www.HMTDMovies.tk). Keep me Join to Our Official Channel to Receive Bot & Movies Updates in [UK Studios Official](https://t.me/UK_Studios_Official). Check "😁 About" Button.</b>''')
     HELP_TXT = """<b>Hi {}
 I have that Features.</b>"""
     ABOUT_TXT = """<b><i>🤖 My Name : <a href=https://t.me/UK_Auto_Filter_Bot><b>UK Auto Filter Bot</b></a>\n
@@ -105,13 +105,13 @@ I have that Features.</b>"""
 ♦️ Total Chats : <code>{}</code>
 ♦️ Used Storage : <code>{}</code> 𝙼𝚒𝙱
 ♦️ Free Storage : <code>{}</code> 𝙼𝚒𝙱"""
-    LOG_TEXT_G = """<b>#New Group</b>
+    LOG_TEXT_G = """<b>#New_Group</b>
     
 <b>᚛› Group ⪼ {}(<code>{}</code>)</b>
 <b>᚛› Total Members ⪼ <code>{}</code></b>
 <b>᚛› Added By ⪼ {}</b>
 """
-    LOG_TEXT_P = """<b>#New User</b>
+    LOG_TEXT_P = """<b>#New_User</b>
     
 <b>᚛› ID - <code>{}</code></b>
 <b>᚛› Name - {}</b>
