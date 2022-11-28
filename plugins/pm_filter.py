@@ -136,6 +136,15 @@ async def next_page(bot, query):
                 InlineKeyboardButton("Next ➡️", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
+    btn.insert(1, [
+        InlineKeyboardButton('😎 Group 😎', url='https://t.me/HMTD_Discussion_Group')
+    ])
+    btn.insert(2, [
+        InlineKeyboardButton('☺️ Share ☺️', url='https://t.me/share/url?url=%2A%2A%F0%9F%98%B1+UK+Movies+Zone%C2%B2%C2%B7%E2%81%B0+%F0%9F%98%B1+%0D%0A+%0D%0AWhatever+you+might+ask%2C+you+will+get..+%E2%9D%A4%EF%B8%8F+%0D%0A+%0D%0A%F0%9F%91%87+Join%0D%0A+https%3A%2F%2Ft.me%2FUK_Movies_Zone')
+    ])
+    btn.insert(3, [
+        InlineKeyboardButton('📡 Channel 📡', url='https://t.me/UK_Studios_Official')
+    ])
     try:
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(btn)
@@ -714,6 +723,15 @@ async def auto_filter(client, msg, spoll=False):
         btn.append(
             [InlineKeyboardButton(text="🗓 1/1", callback_data="pages")]
         )
+    btn.insert(1, [
+        InlineKeyboardButton('😎 Group 😎', url='https://t.me/HMTD_Discussion_Group')
+    ])
+    btn.insert(2, [
+        InlineKeyboardButton('☺️ Share ☺️', url='https://t.me/share/url?url=%2A%2A%F0%9F%98%B1+UK+Movies+Zone%C2%B2%C2%B7%E2%81%B0+%F0%9F%98%B1+%0D%0A+%0D%0AWhatever+you+might+ask%2C+you+will+get..+%E2%9D%A4%EF%B8%8F+%0D%0A+%0D%0A%F0%9F%91%87+Join%0D%0A+https%3A%2F%2Ft.me%2FUK_Movies_Zone')
+    ])
+    btn.insert(3, [
+        InlineKeyboardButton('📡 Channel 📡', url='https://t.me/UK_Studios_Official')
+    ])
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
     if imdb:
