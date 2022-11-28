@@ -42,8 +42,8 @@ SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'HMTD_Discussion_Group')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>www.HMTDMovies.tk - {file_caption}\n\n🔥 Powered By :-\n[UK Studios Official](https://t.me/UK_Studios_Official)\n[HMTD Links](https://t.me/HMTD_Links)</b>")
-BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "<b>www.HMTDMovies.tk - {file_caption}\n\n🔥 Powered By :-\n[UK Studios Official](https://t.me/UK_Studios_Official)\n[HMTD Links](https://t.me/HMTD_Links)</b>")
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>[www.HMTDMovies.tk](http://www.HMTDMovies.tk) - {file_caption}\n\n🔥 Powered By :-\n[UK Studios Official](https://t.me/UK_Studios_Official)\n[HMTD Links](https://t.me/HMTD_Links)</b>")
+BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "<b>[www.HMTDMovies.tk](http://www.HMTDMovies.tk) - {file_caption}\n\n🔥 Powered By :-\n[UK Studios Official](https://t.me/UK_Studios_Official)\n[HMTD Links](https://t.me/HMTD_Links)</b>")
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>🎥 Movie :-  {title}\n\n🎭 Genres :- {genres}\n\n🎙️ Language :- {languages}\n\n🌟 IMDB Rating :- {rating}\n\n📆 Released :- {year}\n\n⏰ Duration :- {runtime}\n\n🗳️ Votes :- {votes}\n\n💰 Box office :- {box_office}\n\n🕺 Director :- {director}\n\n🧑‍💻 Writer :- {writer}\n\n🗺️ Countries :- {countries}\n\n📖 Story Line :- {plot}\n\n🔥 Powered By :-\n@UK_Studios_Official\n@HMTD_Links\n\n🌐 Our Website :- www.HMTDMovies.tk</b>")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), True)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
@@ -68,8 +68,8 @@ LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
     
       # URL Shortener #
 
-URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'v2links.com')
-URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '8ba22a4464132e201e9b459bda39252480d67e5d')
+URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'droplink.co')
+URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '1d85e33efc4969b36e0f6c0a017aaaefd8accccc')
 
      # Auto Delete For Group Message (Self Delete) #
 SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 1000))
