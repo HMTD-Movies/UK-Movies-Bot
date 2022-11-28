@@ -67,6 +67,8 @@ Read [this](https://telegram.dog/sources_cods) before you start messing up with 
 ## Deploy
 You can deploy this bot anywhere.
 
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?...)
+
 <i>**[Watch Deploying Tutorial...](https://youtu.be/RWs6sh8m2Uk)**</i>
 
 <details><summary>Deploy To Heroku</summary>
