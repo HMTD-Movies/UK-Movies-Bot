@@ -164,10 +164,11 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('**This Movie is not Yet Released or Added to Database 💌**')
+            k = await query.message.edit(
+                text=(M_NT_FND),
                 reply_markup=InlineKeyboardMarkup(
                                        [[
-                                         InlineKeyboardButton('Request to admin ', url="https://t.me/sahid_malik")
+                                         InlineKeyboardButton('⭕ Request to Admin ⭕', url="https://t.me/HMTD_Feedback_Bot")
                                        
                                        ]]
                 ),
