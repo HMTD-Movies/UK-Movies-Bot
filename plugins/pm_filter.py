@@ -178,7 +178,7 @@ async def advantage_spoll_choker(bot, query):
                                        
                                        ]]
                 ),
-                parse_mode='html'
+                parse_mode=enums.ParseMode.HTML
 )
 
             await asyncio.sleep(10)
