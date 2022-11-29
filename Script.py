@@ -21,10 +21,10 @@ I have that Features.</b>"""
 📚 Framework : Python3\n
 📡 Hosted on : VPS\n
 📢 Updates Channel : <a href=https://t.me/UK_Studios_Official><b></b>UK Studios Official</a>\n
-🌐 Website : www.HMTDMovies.tk\n</b></i>"""
+🌐 Website : <a href=http://www.HMTDMovies.tk><b></b>www.HMTDMovies.tk</a>\n</b></i>"""
     SOURCE_TXT = """<b>Create One Like This:</b>
 » I will Create One Bot For You. But Paid<b>
-» Contact Me @HMTD_Karthik<b>"""
+» Contact Me</b> <a href=https://t.me/HMTD_Karthik><b>Karthik</b></a>"""
     MANUELFILTER_TXT = """<b>Help :</b> <b>Filters</b>
 
 <b>- Filter is the feature were users can set automated replies for a particular keyword and Search Bot will respond whenever a keyword is found the message</b>
@@ -100,11 +100,11 @@ I have that Features.</b>"""
 • /unban  - to unban a user.
 • /channel - to get list of total connected channels
 • /broadcast - to broadcast a message to all users</b>"""
-    STATUS_TXT = """♦️ Total Files : <code>{}</code>
-♦️ Total Users : <code>{}</code>
-♦️ Total Chats : <code>{}</code>
-♦️ Used Storage : <code>{}</code> 𝙼𝚒𝙱
-♦️ Free Storage : <code>{}</code> 𝙼𝚒𝙱"""
+    STATUS_TXT = """<b>♦️ Total Files :</b> <code>{}</code>
+<b>♦️ Total Users :</b> <code>{}</code>
+<b>♦️ Total Chats :</b> <code>{}</code>
+<b>♦️ Used Storage :</b> <code>{}</code>
+<b>♦️ Free Storage :</b> <code>{}</code>"""
     LOG_TEXT_G = """<b>#New_Group</b>
     
 <b>᚛› Group ⪼ {}(<code>{}</code>)</b>
