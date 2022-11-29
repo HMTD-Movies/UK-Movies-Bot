@@ -116,5 +116,5 @@ I have that Features.</b>"""
 <b>᚛› ID - <code>{}</code></b>
 <b>᚛› Name - {}</b>
 """
-M_NT_FND = """<b>This Movie Not Found my Database or Not Released This Movie \n\n Request to admin</b>"""
+M_NT_FND = """<b>This Movie Not Found my Database or Not Released This Movie \n\nRequest to Admin</b>"""
 
