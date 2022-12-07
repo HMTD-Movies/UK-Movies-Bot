@@ -12,7 +12,7 @@ def is_enabled(value, default):
 
 class script(object):
     HOME_BUTTONURL_UPDATES = environ.get("HOME_BUTTONURL_UPDATES", 'https://droplink.co/ref/KarthikUK')
-    START_TXT = environ.get("START_TXT", '''<b>Hello {} 👋🏻 I'm an UK Movies Official Auto Filter Bot (Movie Search Bot) Maintained by <a href=https://t.me/UK_Movies_Zone_Update><b></b>UK Movies Zone (Update)</a>. We are Providing Tamil and Tamil Dubbed Movies. More Languages Coming Soon. I Can Support Upto 4GB File. You Can Get added Files GDrive Links and 4GB above Links also. You Can Get GDrive Links in <a href=http://www.HMTDMovies.tk><b></b>www.HMTDMovies.tk</a>. Keep me Join to Our Official Channel to Receive Bot & Movies Updates in <a href=https://t.me/UK_Movies_Zone_Update><b></b>UK Movies Zone (Update)</a>. Check "😁 About" Button.</b>''')
+    START_TXT = environ.get("START_TXT", '''<b>Hello {} 👋🏻 I'm an UK Movies Official Auto Filter Bot (Movie Search Bot) Maintained by <a href=https://t.me/UK_Movies_Zone_Updates><b></b>UK Movies Zone (Updates)</a>. We are Providing Tamil and Tamil Dubbed Movies. More Languages Coming Soon. I Can Support Upto 4GB File. You Can Get added Files GDrive Links and 4GB above Links also. You Can Get GDrive Links in <a href=http://www.HMTDMovies.tk><b></b>www.HMTDMovies.tk</a>. Keep me Join to Our Official Channel to Receive Bot & Movies Updates in <a href=https://t.me/UK_Movies_Zone_Updates><b></b>UK Movies Zone (Updates)</a>. Check "😁 About" Button.</b>''')
     HELP_TXT = """<b>Hi {}
 I have that Features.
 Create One Link This :
@@ -23,7 +23,7 @@ Create One Link This :
 📝 Language : Pyrogram\n
 📚 Framework : Python3\n
 📡 Hosted on : VPS\n
-📢 Updates Channel : <a href=https://t.me/UK_Movies_Zone_Update><b></b>UK Movies Zone (Update)</a>\n
+📢 Updates Channel : <a href=https://t.me/UK_Movies_Zone_Updates><b></b>UK Movies Zone (Updates)</a>\n
 🌐 Website : <a href=http://www.HMTDMovies.tk><b></b>www.HMTDMovies.tk</a>\n</b></i>"""
     SOURCE_TXT = """<b>Create One Like This :</b>
 » I will Create One Bot For You. But Paid<b>
@@ -46,19 +46,19 @@ Create One Link This :
 
 <b>- Search Bot Supports both url and alert inline buttons.</b>
 
-<b>NOTE:</b>
+<b>NOTE :</b>
 <b>1. Telegram will not allows you to send buttons without any content, so content is mandatory.
 2. Search Bot supports buttons with any telegram media type.
 3. Buttons should be properly parsed as markdown format</b>
 
-<b>URL buttons:</b>
+<b>URL buttons :</b>
 <code>[Button Text](buttonurl:https://t.me/HMTD_Karthik)</code>
 
-<b>Alert buttons:</b>
+<b>Alert buttons :</b>
 <code>[Button Text](buttonalert:This is an alert message)</code>"""
     AUTOFILTER_TXT = """<b>Help :</b> <b>Auto Filter</b>
 
-<b>NOTE:</b>
+<b>NOTE :</b>
 <b>1. Make me the admin of your channel if it's private.
 2. make sure that your channel does not contains camrips, porn and fake files.
 3. Forward the last message to me with quotes.
@@ -68,30 +68,30 @@ Create One Link This :
 <b>- Used to connect bot to PM for managing filters 
 - it helps to avoid spamming in groups.</b>
 
-<b>NOTE:</b>
+<b>NOTE :</b>
 <b>1. Only admins can add a connection.
 2. Send</b> <code>/connect</code> <b>for connecting me to ur PM</b>
 
-<b>Commands and Usage:</b>
+<b>Commands and Usage :</b>
 <b>• /connect  - connect a particular chat to your PM
 • /disconnect  - disconnect from a chat
 • /connections - list all your connections</b>"""
     EXTRAMOD_TXT = """<b>Help :</b> <b>Extra Modules</b>
 
-<b>NOTE:</b>
+<b>NOTE :</b>
 <b>these are the extra features of Auto Filter Bot (Movie Search Bot)</b>
 
-<b>Commands and Usage:</b>
+<b>Commands and Usage :</b>
 <b>• /id - get id of a specified user.
 • /info  - get information about a user.
 • /imdb  - get the film information from IMDb source.
 • /search  - get the film information from various sources.</b>"""
     ADMIN_TXT = """<b>Help :</b> <b>Admin mods</b>
 
-<b>NOTE:</b>
+<b>NOTE :</b>
 <b>This module only works for my admins</b>
 
-<b>Commands and Usage:</b>
+<b>Commands and Usage :</b>
 <b>• /logs - to get the rescent errors
 • /stats - to get status of files in db.
 • /delete - to delete a specific file from db.
