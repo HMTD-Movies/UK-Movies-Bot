@@ -451,7 +451,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('©️ Add me to Your Group', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('☺️ Subscribe', url='https://youtube.com/channel/UCpF-d70K9h7IpaHsFuJiMYQ'),
+            InlineKeyboardButton('💰 Earn Money', url='https://droplink.co/ref/KarthikUK'),
             InlineKeyboardButton('📢 Update Channel', url='https://t.me/UK_Studios_Official')
         ], [
             InlineKeyboardButton('😎 Help', callback_data='help'),
@@ -605,7 +605,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if str(grp_id) != str(grpid):
             await query.message.edit("**Your Active Connection Has Been Changed. Go To /settings.**")
-            return await query.answer('**Share and Support us ❤️**')
+            return await query.answer('Share and Support us ❤️')
 
         if status == "True":
             await save_group_settings(grpid, set_type, False)
