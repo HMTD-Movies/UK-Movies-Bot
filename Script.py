@@ -32,12 +32,12 @@ Create One Link This :
 
 <b>- Filter is the feature were users can set automated replies for a particular keyword and Search Bot will respond whenever a keyword is found the message</b>
 
-<b>NOTE:</b>
+<b>NOTE :</b>
 <b>1. Search Bot should have admin privillage.
 2. only admins can add filters in a chat.
 3. alert buttons have a limit of 64 characters.</b>
 
-<b>Commands and Usage:</b>
+<b>Commands and Usage :</b>
 <b>• /filter - add a filter in chat
 • /filters - list all the filters of a chat
 • /del - delete a specific filter in chat
