@@ -247,7 +247,7 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('🔥 Join Our Channel 🔥', url='https://telegram.me/UK_Studios_Official') ] ] ),
+        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('🔥 Join Our Channel 🔥', url='https://t.me/UK_Movies_Zone_Updates') ] ] ),
         protect_content=True if pre == 'filep' else False,
         )
                     
