@@ -14,7 +14,10 @@ class script(object):
     HOME_BUTTONURL_UPDATES = environ.get("HOME_BUTTONURL_UPDATES", 'https://droplink.co/ref/KarthikUK')
     START_TXT = environ.get("START_TXT", '''<b>Hello {} 👋🏻 I'm an UK Studios Official Auto Filter Bot (Movie Search Bot) Maintained by <a href=https://t.me/UK_Studios_Official><b></b>UK Studios Official</a>. We are Providing Tamil and Tamil Dubbed Movies. More Languages Coming Soon. I Can Support Upto 4GB File. You Can Get added Files GDrive Links and 4GB above Links also. You Can Get GDrive Links in <a href=http://www.HMTDMovies.tk><b></b>www.HMTDMovies.tk</a>. Keep me Join to Our Official Channel to Receive Bot & Movies Updates in <a href=https://t.me/UK_Studios_Official><b></b>UK Studios Official</a>. Check "😁 About" Button.</b>''')
     HELP_TXT = """<b>Hi {}
-I have that Features.</b>"""
+I have that Features.
+Create One Link This :
+» I will Create For One Bot You. But Paid
+» Contact Me <a href=https://t.me/HMTD_Karthik><b>Karthik</b></a></b>"""
     ABOUT_TXT = """<b><i>🤖 My Name : <a href=https://t.me/UK_Auto_Filter_Bot><b>UK Auto Filter Bot</b></a>\n
 🧑🏻‍💻 Developer : <a href=https://t.me/HMTD_Karthik><b>Karthik</b></a>\n
 📝 Language : Pyrogram\n
@@ -22,7 +25,7 @@ I have that Features.</b>"""
 📡 Hosted on : VPS\n
 📢 Updates Channel : <a href=https://t.me/UK_Studios_Official><b></b>UK Studios Official</a>\n
 🌐 Website : <a href=http://www.HMTDMovies.tk><b></b>www.HMTDMovies.tk</a>\n</b></i>"""
-    SOURCE_TXT = """<b>Create One Like This:</b>
+    SOURCE_TXT = """<b>Create One Like This :</b>
 » I will Create One Bot For You. But Paid<b>
 » Contact Me</b> <a href=https://t.me/HMTD_Karthik><b>Karthik</b></a>"""
     MANUELFILTER_TXT = """<b>Help :</b> <b>Filters</b>
