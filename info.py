@@ -41,17 +41,17 @@ LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001821439025'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'HMTD_Discussion_Group')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
-SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
+SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>[www.HMTDMovies.tk](http://www.HMTDMovies.tk) - {file_caption}\n\n🔥 Update Channel :-\n[UK Movies Zone (Update)](https://t.me/UK_Movies_Zone_Update)\n🔥 Powered By :-\n[UK Studios Official](https://t.me/UK_Studios_Official)\n[HMTD Links](https://t.me/HMTD_Links)</b>")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "<b>[www.HMTDMovies.tk](http://www.HMTDMovies.tk) - {file_caption}\n\n🔥 Update Channel :-\n[UK Movies Zone (Update)](https://t.me/UK_Movies_Zone_Update)\n🔥 Powered By :-\n[UK Studios Official](https://t.me/UK_Studios_Official)\n[HMTD Links](https://t.me/HMTD_Links)</b>")
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>🎥 Movie :-  {title}\n\n🎭 Genres :- {genres}\n\n🎙️ Language :- {languages}\n\n🌟 IMDB Rating :- {rating}\n\n📆 Released :- {year}\n\n⏰ Duration :- {runtime}\n\n🗳️ Votes :- {votes}\n\n💰 Box office :- {box_office}\n\n🕺 Director :- {director}\n\n🧑‍💻 Writer :- {writer}\n\n🗺️ Countries :- {countries}\n\n📖 Story Line :- {plot}\n\n🔥 Powered By :-\n@UK_Studios_Official\n@HMTD_Links\n\n🌐 Our Website :- www.HMTDMovies.tk</b>")
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>🎥 Movie :-  {title}\n\n🎭 Genres :- {genres}\n\n🎙️ Language :- {languages}\n\n🌟 IMDB Rating :- {rating}\n\n📆 Released :- {year}\n\n⏰ Duration :- {runtime}\n\n🗳️ Votes :- {votes}\n\n💰 Box office :- {box_office}\n\n🕺 Director :- {directory}\n\n🧑‍💻 Writer :- {writer}\n\n🗺️ Countries :- {countries}\n\n📖 Story Line :- {plot}\n\n📡 Update Channel :-\n<a href=https://t.me/UK_Movies_Zone_Update><b></b>UK Movies Zone (Update)</a>\n\n🔥 Powered By :-\n<a href=https://t.me/UK_Studios_Official><b></b>UK Studies Official</a>\n<a href=https://t.me/HMTD_Links><b></b>HMTD Links</a>\n\n🌐 Our Website :- <a href=https://www.HMTDMovies.tk/><b></b>www.HMTDMovies.tk</a></b>")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), True)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', '-1001797626445'))
 FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
-PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
+PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), True)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), True)
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
@@ -79,7 +79,7 @@ if SELF_DELETE == "True":
 
     # Download Tutorial Button #
 DOWNLOAD_TEXT_NAME = "📥 HOW TO DOWNLOAD 📥"
-DOWNLOAD_TEXT_URL = "https://t.me/UK_Studios_Official"
+DOWNLOAD_TEXT_URL = "https://t.me/UK_Movies_Zone_Update"
 
    # Custom Caption Under Button #
 CAPTION_BUTTON = "🔥 Join Our Channel 🔥"
