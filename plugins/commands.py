@@ -23,7 +23,7 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('📢 Update Channel', url='https://telegram.me/UK_Studios_Official')
+                InlineKeyboardButton('📢 Update Channel', url='https://t.me/UK_Movies_Zone_Update')
             ],
             [
                 InlineKeyboardButton('💰 Earn Money', url=f"https://droplink.co/ref/KarthikUK"),
@@ -48,7 +48,7 @@ async def start(client, message):
             InlineKeyboardButton('©️ Add me to Your Group', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('💰 Earn Money' , url='https://droplink.co/ref/KarthikUK'),
-            InlineKeyboardButton('📢 Update Channel', url='https://t.me/UK_Studios_Official')
+            InlineKeyboardButton('📢 Update Channel', url='https://t.me/UK_Movies_Zone_Update')
             ],[
             InlineKeyboardButton('😎 Help', callback_data='help'),
             InlineKeyboardButton('😁 About', callback_data='about')
@@ -94,7 +94,7 @@ async def start(client, message):
             InlineKeyboardButton('©️ Add me to Your Group', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('💰 Earn Money', url='https://droplink.co/ref/KarthikUK'),
-            InlineKeyboardButton('📢 Update Channel', url='https://t.me/UK_Studios_Official')
+            InlineKeyboardButton('📢 Update Channel', url='https://t.me/UK_Movies_Zone_Update')
             ],[
             InlineKeyboardButton('😎 Help', callback_data='help'),
             InlineKeyboardButton('😁 About', callback_data='about')
