@@ -26,7 +26,7 @@ async def start(client, message):
                 InlineKeyboardButton('📢 Update Channel', url='https://telegram.me/UK_Studios_Official')
             ],
             [
-                InlineKeyboardButton('☺️ Subscribe', url=f"https://youtube.com/channel/UCpF-d70K9h7IpaHsFuJiMYQ"),
+                InlineKeyboardButton('💰 Earn Money', url=f"https://droplink.co/ref/KarthikUK"),
             ],
             [
                 InlineKeyboardButton(text=DOWNLOAD_TEXT_NAME,url=DOWNLOAD_TEXT_URL)
@@ -47,7 +47,7 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('©️ Add me to Your Group', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('☺️ Subscribe' , url='https://youtube.com/channel/UCpF-d70K9h7IpaHsFuJiMYQ'),
+            InlineKeyboardButton('💰 Earn Money' , url='https://droplink.co/ref/KarthikUK'),
             InlineKeyboardButton('📢 Update Channel', url='https://t.me/UK_Studios_Official')
             ],[
             InlineKeyboardButton('😎 Help', callback_data='help'),
@@ -93,7 +93,7 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('©️ Add me to Your Group', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('☺️ Subscribe', url='https://youtube.com/channel/UCpF-d70K9h7IpaHsFuJiMYQ'),
+            InlineKeyboardButton('💰 Earn Money', url='https://droplink.co/ref/KarthikUK'),
             InlineKeyboardButton('📢 Update Channel', url='https://t.me/UK_Studios_Official')
             ],[
             InlineKeyboardButton('😎 Help', callback_data='help'),
@@ -364,7 +364,7 @@ async def delete_all_index(bot, message):
 @Client.on_callback_query(filters.regex(r'^autofilter_delete'))
 async def delete_all_index_confirm(bot, message):
     await Media.collection.drop()
-    await message.answer('**Please Share & Support Us 💖**')
+    await message.answer('Please Share & Support Us ❤️')
     await message.message.edit('**Succesfully Deleted All The Indexed Files.**')
 
 
