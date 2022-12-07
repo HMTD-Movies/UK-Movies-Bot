@@ -14,12 +14,12 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '11973721'))
 API_HASH = environ.get('API_HASH', '5264bf4663e9159565603522f58d3c18')
-BOT_TOKEN = environ.get('BOT_TOKEN', "5133369293:AAFuyy7kqv3Ml5PwCprmnW0OpGyEoiMinfc")
+BOT_TOKEN = environ.get('BOT_TOKEN', "5777457260:AAFEonyZCsN4zqa4R2asX51KJ7KXQsUazV0")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1000))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/9b367594578b6d6a35e27.jpg')).split()
+PICS = (environ.get('PICS', 'https://telegra.ph/file/0cc81f5c4df05837d8b05.jpg')).split()
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1391556668 5162208212').split()]
@@ -42,8 +42,8 @@ SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'HMTD_Discussion_Group')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>[www.HMTDMovies.tk](http://www.HMTDMovies.tk) - {file_caption}\n\n🔥 Powered By :-\n[UK Studios Official](https://t.me/UK_Studios_Official)\n[HMTD Links](https://t.me/HMTD_Links)</b>")
-BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "<b>[www.HMTDMovies.tk](http://www.HMTDMovies.tk) - {file_caption}\n\n🔥 Powered By :-\n[UK Studios Official](https://t.me/UK_Studios_Official)\n[HMTD Links](https://t.me/HMTD_Links)</b>")
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>[www.HMTDMovies.tk](http://www.HMTDMovies.tk) - {file_caption}\n\n🔥 Powered By :-\n[UK Movies Zone (Update)](https://t.me/UK_Movies_Zone_Update)\n[UK Studios Official](https://t.me/UK_Studios_Official)\n[HMTD Links](https://t.me/HMTD_Links)</b>")
+BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "<b>[www.HMTDMovies.tk](http://www.HMTDMovies.tk) - {file_caption}\n\n🔥 Powered By :-\n[UK Movies Zone (Update)](https://t.me/UK_Movies_Zone_Update)\n[UK Studios Official](https://t.me/UK_Studios_Official)\n[HMTD Links](https://t.me/HMTD_Links)</b>")
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>🎥 Movie :-  {title}\n\n🎭 Genres :- {genres}\n\n🎙️ Language :- {languages}\n\n🌟 IMDB Rating :- {rating}\n\n📆 Released :- {year}\n\n⏰ Duration :- {runtime}\n\n🗳️ Votes :- {votes}\n\n💰 Box office :- {box_office}\n\n🕺 Director :- {director}\n\n🧑‍💻 Writer :- {writer}\n\n🗺️ Countries :- {countries}\n\n📖 Story Line :- {plot}\n\n🔥 Powered By :-\n@UK_Studios_Official\n@HMTD_Links\n\n🌐 Our Website :- www.HMTDMovies.tk</b>")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), True)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
@@ -83,6 +83,6 @@ DOWNLOAD_TEXT_URL = "https://t.me/UK_Studios_Official"
 
    # Custom Caption Under Button #
 CAPTION_BUTTON = "🔥 Join Our Channel 🔥"
-CAPTION_BUTTON_URL = "https://t.me/UK_Studios_Official"
+CAPTION_BUTTON_URL = "https://t.me/UK_Movies_Zone_Update"
 
    # Auto Delete For Bot Sending Files #
