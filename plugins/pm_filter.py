@@ -108,7 +108,7 @@ async def next_page(bot, query):
 
     btn.insert(0,
         [
-            InlineKeyboardButton(text="⚡ How to Download ⚡", url='https://t.me/UK_Studios_Official')
+            InlineKeyboardButton(text="⚡ How to Download ⚡", url='https://t.me/UK_Movies_Zone_Update')
         ]
     )
 
@@ -139,7 +139,7 @@ async def next_page(bot, query):
     btn.insert(0, [
         InlineKeyboardButton('😎 Group', url='https://t.me/HMTD_Discussion_Group'),
         InlineKeyboardButton('☺️ Share', url='https://t.me/share/url?url=%2A%2A%F0%9F%98%B1+UK+Movies+Zone%C2%B2%C2%B7%E2%81%B0+%F0%9F%98%B1+%0D%0A+%0D%0AWhatever+you+might+ask%2C+you+will+get..+%E2%9D%A4%EF%B8%8F+%0D%0A+%0D%0A%F0%9F%91%87+Join%0D%0A+https%3A%2F%2Ft.me%2FUK_Movies_Zone'),
-        InlineKeyboardButton('📡 Channel', url='https://t.me/UK_Studios_Official')
+        InlineKeyboardButton('📡 Channel', url='https://t.me/UK_Movies_Zone_Update')
         ]
     )
     try:
@@ -452,7 +452,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('©️ Add me to Your Group', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('💰 Earn Money', url='https://droplink.co/ref/KarthikUK'),
-            InlineKeyboardButton('📢 Update Channel', url='https://t.me/UK_Studios_Official')
+            InlineKeyboardButton('📢 Update Channel', url='https://t.me/UK_Movies_Zone_Update')
         ], [
             InlineKeyboardButton('😎 Help', callback_data='help'),
             InlineKeyboardButton('😁 About', callback_data='about')
@@ -704,7 +704,7 @@ async def auto_filter(client, msg, spoll=False):
 
     btn.insert(0,
         [
-            InlineKeyboardButton(text="⚡ How to Download ⚡", url='https://t.me/UK_Studios_Official')
+            InlineKeyboardButton(text="⚡ How to Download ⚡", url='https://t.me/UK_Movies_Zone_Update')
         ]
     )
 
@@ -723,7 +723,7 @@ async def auto_filter(client, msg, spoll=False):
     btn.insert(0, [
         InlineKeyboardButton('😎 Group', url='https://t.me/HMTD_Discussion_Group'),
         InlineKeyboardButton('☺️ Share', url='https://t.me/share/url?url=%2A%2A%F0%9F%98%B1+UK+Movies+Zone%C2%B2%C2%B7%E2%81%B0+%F0%9F%98%B1+%0D%0A+%0D%0AWhatever+you+might+ask%2C+you+will+get..+%E2%9D%A4%EF%B8%8F+%0D%0A+%0D%0A%F0%9F%91%87+Join%0D%0A+https%3A%2F%2Ft.me%2FUK_Movies_Zone'),
-        InlineKeyboardButton('📡 Channel', url='https://t.me/UK_Studios_Official')
+        InlineKeyboardButton('📡 Channel', url='https://t.me/UK_Movies_Zone_Update')
         ]
     )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
