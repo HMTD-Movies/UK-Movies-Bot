@@ -108,7 +108,7 @@ async def next_page(bot, query):
 
     btn.insert(0,
         [
-            InlineKeyboardButton(text="⚡ How to Download ⚡", url='https://t.me/UK_Movies_Zone_Update')
+            InlineKeyboardButton(text="⚡ How to Download ⚡", url='https://t.me/UK_Movies_Zone_Updates')
         ]
     )
 
@@ -138,8 +138,8 @@ async def next_page(bot, query):
         )
     btn.insert(0, [
         InlineKeyboardButton('😎 Group', url='https://t.me/HMTD_Discussion_Group'),
-        InlineKeyboardButton('☺️ Share', url='https://t.me/share/url?url=I%27m%20an%20UK%20Movies%20Official%20Auto%20Filter%20Bot%20%28Movie%20Search%20Bot%29.%20Just%20Search%20Then%20You%20Can%20Get%20Files..%E2%9D%A4%EF%B8%8F%0A%0A%F0%9F%93%A2%20Join%20Our%20Update%20Channel%20%3A-%0A%40UK_Movies_Zone_Update%0A%0A%F0%9F%94%A5%20Powered%20By%20%3A-%0A%40UK_Studios_Official%0A%40HMTD_Links%0A%20%20%0A%F0%9F%91%87%20Join%20%3A-%0A%20https%3A//t.me/UK_Movies_Zone'),
-        InlineKeyboardButton('📢 Channel', url='https://t.me/UK_Movies_Zone_Update')
+        InlineKeyboardButton('☺️ Share', url='https://t.me/share/url?url=I%27m%20an%20UK%20Movies%20Official%20Auto%20Filter%20Bot%20%28Movie%20Search%20Bot%29.%20Just%20Search%20Then%20You%20Can%20Get%20Files..%E2%9D%A4%EF%B8%8F%0A%0A%F0%9F%93%A2%20Join%20Our%20Update%20Channel%20%3A-%0A%40UK_Movies_Zone_Updates%0A%0A%F0%9F%94%A5%20Powered%20By%20%3A-%0A%40UK_Studios_Official%0A%40HMTD_Links%0A%20%20%0A%F0%9F%91%87%20Join%20%3A-%0A%20https%3A//t.me/UK_Movies_Zone'),
+        InlineKeyboardButton('📢 Channel', url='https://t.me/UK_Movies_Zone_Updates')
         ]
     )
     try:
@@ -290,7 +290,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         else:
             await query.message.edit_text('**Some error occurred!!**', parse_mode=enums.ParseMode.MARKDOWN)
-        return await query.answer('Share and Support us ❤️')
+        return await query.answer('Share and Support us')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -313,7 +313,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"**Some error occurred!!**",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('Share and Support us ❤️')
+        return await query.answer('Share and Support us')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -331,7 +331,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"**Some error occurred!!**",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('Share and Support us ❤️')
+        return await query.answer('Share and Support us')
     elif query.data == "backcb":
         await query.answer()
 
@@ -342,7 +342,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(
                 "**There are no active connections!! Connect to some groups first.**",
             )
-            return await query.answer('Share and Support us ❤️')
+            return await query.answer('Share and Support us')
         buttons = []
         for groupid in groupids:
             try:
@@ -452,7 +452,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('©️ Add me to Your Group', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('💰 Earn Money', url='https://droplink.co/ref/KarthikUK'),
-            InlineKeyboardButton('📢 Update Channel', url='https://t.me/UK_Movies_Zone_Update')
+            InlineKeyboardButton('📢 Update Channel', url='https://t.me/UK_Movies_Zone_Updates')
         ], [
             InlineKeyboardButton('😎 Help', callback_data='help'),
             InlineKeyboardButton('😁 About', callback_data='about')
@@ -722,8 +722,8 @@ async def auto_filter(client, msg, spoll=False):
         )
     btn.insert(0, [
         InlineKeyboardButton('😎 Group', url='https://t.me/HMTD_Discussion_Group'),
-        InlineKeyboardButton('☺️ Share', url='https://t.me/share/url?url=I%27m%20an%20UK%20Movies%20Official%20Auto%20Filter%20Bot%20%28Movie%20Search%20Bot%29.%20Just%20Search%20Then%20You%20Can%20Get%20Files..%E2%9D%A4%EF%B8%8F%0A%0A%F0%9F%93%A2%20Join%20Our%20Update%20Channel%20%3A-%0A%40UK_Movies_Zone_Update%0A%0A%F0%9F%94%A5%20Powered%20By%20%3A-%0A%40UK_Studios_Official%0A%40HMTD_Links%0A%20%20%0A%F0%9F%91%87%20Join%20%3A-%0A%20https%3A//t.me/UK_Movies_Zone'),
-        InlineKeyboardButton('📢 Channel', url='https://t.me/UK_Movies_Zone_Update')
+        InlineKeyboardButton('☺️ Share', url='https://t.me/share/url?url=I%27m%20an%20UK%20Movies%20Official%20Auto%20Filter%20Bot%20%28Movie%20Search%20Bot%29.%20Just%20Search%20Then%20You%20Can%20Get%20Files..%E2%9D%A4%EF%B8%8F%0A%0A%F0%9F%93%A2%20Join%20Our%20Update%20Channel%20%3A-%0A%40UK_Movies_Zone_Updates%0A%0A%F0%9F%94%A5%20Powered%20By%20%3A-%0A%40UK_Studios_Official%0A%40HMTD_Links%0A%20%20%0A%F0%9F%91%87%20Join%20%3A-%0A%20https%3A//t.me/UK_Movies_Zone'),
+        InlineKeyboardButton('📢 Channel', url='https://t.me/UK_Movies_Zone_Updates')
         ]
     )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
