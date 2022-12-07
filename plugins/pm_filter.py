@@ -202,13 +202,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     title = chat.title
                 except:
                     await query.message.edit_text("**Make sure I'm present in your group!!**", quote=True)
-                    return await query.answer('**Share and Support us ❤️**')
+                    return await query.answer('Share and Support us ❤️')
             else:
                 await query.message.edit_text(
                     "**I'm not connected to any groups!\nCheck /connections or connect to any groups**",
                     quote=True
                 )
-                return await query.answer('**Share and Support us ❤️**')
+                return await query.answer('Share and Support us ❤️')
 
         elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
             grp_id = query.message.chat.id
@@ -290,7 +290,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         else:
             await query.message.edit_text('**Some error occurred!!**', parse_mode=enums.ParseMode.MARKDOWN)
-        return await query.answer('**Share and Support us ❤️**')
+        return await query.answer('Share and Support us ❤️')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -313,7 +313,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"**Some error occurred!!**",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('**Share and Support us ❤️**')
+        return await query.answer('Share and Support us ❤️')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -331,7 +331,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"**Some error occurred!!**",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('**Share and Support us ❤️**')
+        return await query.answer('Share and Support us ❤️')
     elif query.data == "backcb":
         await query.answer()
 
@@ -342,7 +342,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(
                 "**There are no active connections!! Connect to some groups first.**",
             )
-            return await query.answer('**Share and Support us ❤️**')
+            return await query.answer('Share and Support us ❤️')
         buttons = []
         for groupid in groupids:
             try:
