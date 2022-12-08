@@ -263,15 +263,15 @@ async def channel_info(bot, message):
     else:
         raise ValueError("Unexpected type of CHANNELS")
 
-    text = '**📑 Indexed Channels/Groups**\n'
-    for Channel in Channels:
+    text = '<b>📑 Indexed Channels/Groups</b>\n'
+    for Channel in Channels :
         chat = await bot.get_chat(channel)
         if chat.username:
             text += '\n@' + chat.username
         else:
             text += '\n' + chat.title or chat.first_name
 
-    text += f'\n\n**Total:** {len(CHANNELS)}'
+    text += f'\n\n<b>Total : {len(CHANNELS)}</b>'
 
     if len(text) < 4096:
         await message.reply(text)
@@ -285,7 +285,7 @@ async def channel_info(bot, message):
 
 @Client.on_message(filters.command('logs') & filters.user(ADMINS))
 async def log_file(bot, message):
-    """Send Log File 📂"""
+    ""<b>Send Log File 📂</b>"""
     try:
         await message.reply_document('TelegramBot.log')
     except Exception as e:
@@ -296,9 +296,9 @@ async def delete(bot, message):
     """Delete file from database"""
     reply = message.reply_to_message
     if reply and reply.media:
-        msg = await message.reply("🗑️ Deleting...", quote=True)
+        msg = await message.reply("<b>🗑️ Deleting...</b>", quote=True)
     else:
-        await message.reply('**Reply to File 📂 with /delete which You Want to Delete**', quote=True)
+        await message.reply('<b>Reply to File 📂 with /delete which You Want to Delete</b>', quote=True)
         return
 
     for file_type in ("document", "video", "audio"):
@@ -306,7 +306,7 @@ async def delete(bot, message):
         if media is not None:
             break
     else:
-        await msg.edit('This is not supported file format')
+        await msg.edit('<b>This is not Supported File Format</b>')
         return
     
     file_id, file_ref = unpack_new_file_id(media.file_id)
@@ -315,7 +315,7 @@ async def delete(bot, message):
         '_id': file_id,
     })
     if result.deleted_count:
-        await msg.edit('**File 📂 Successfully Deleted**')
+        await msg.edit('<b>File 📂 Successfully Deleted</b>')
     else:
         file_name = re.sub(r"(_|\-|\.|\+)", " ", str(media.file_name))
         result = await Media.collection.delete_many({
@@ -324,7 +324,7 @@ async def delete(bot, message):
             'mime_type': media.mime_type
             })
         if result.deleted_count:
-            await msg.edit('**File 📂 Successfully Deleted**')
+            await msg.edit('<b>File 📂 Successfully Deleted</b>')
         else:
             # files indexed before https://github.com/EvamariaTG/EvaMaria/commit/f3d2a1bcb155faf44178e5d7a685a1b533e714bf#diff-86b613edf1748372103e94cacff3b578b36b698ef9c16817bb98fe9ef22fb669R39 
             # have original file name.
@@ -334,15 +334,15 @@ async def delete(bot, message):
                 'mime_type': media.mime_type
             })
             if result.deleted_count:
-                await msg.edit('**File 📂 Successfully Deleted**')
+                await msg.edit('<b>File 📂 Successfully Deleted</b>')
             else:
-                await msg.edit('**File 📂 Not Found in Database**')
+                await msg.edit('<b>File 📂 Not Found in Databas</b>')
 
 
 @Client.on_message(filters.command('deleteall') & filters.user(ADMINS))
 async def delete_all_index(bot, message):
     await message.reply_text(
-        '**This Process Will Delete All The Files From Your Database.\nDo You Want to Continue This...??**',
+        '<b>This Process Will Delete All The Files From Your Database.\nDo You Want to Continue This...??</b>',
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -365,14 +365,14 @@ async def delete_all_index(bot, message):
 async def delete_all_index_confirm(bot, message):
     await Media.collection.drop()
     await message.answer('Please Share & Support Us')
-    await message.message.edit('**Succesfully Deleted All The Indexed Files.**')
+    await message.message.edit('<b>Succesfully Deleted All The Indexed Files.</b>')
 
 
 @Client.on_message(filters.command('settings'))
 async def settings(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"**You are Anonymous Admin. Use /connect {message.chat.id} in PM**")
+        return await message.reply(f"<b>You are Anonymous Admin. Use /connect {message.chat.id} in PM</b>")
     chat_type = message.chat.type
 
     if chat_type == enums.ChatType.PRIVATE:
@@ -383,10 +383,10 @@ async def settings(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("**Make sure I'm present in your Group!**", quote=True)
+                await message.reply_text("<b>Make sure I'm present in your Group!</b>", quote=True)
                 return
         else:
-            await message.reply_text("I'm not connected to any Groups!**", quote=True)
+            await message.reply_text("<b>I'm not connected to any Groups!</b>", quote=True)
             return
 
     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
@@ -484,10 +484,10 @@ async def settings(client, message):
 
 @Client.on_message(filters.command('set_template'))
 async def save_template(client, message):
-    sts = await message.reply("**Checking New Template**")
+    sts = await message.reply("<b>Checking New Template</b>")
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"**You are Anonymous Admin. Use /connect {message.chat.id} in PM**")
+        return await message.reply(f"<b>You are Anonymous Admin. Use /connect {message.chat.id} in PM</b>")
     chat_type = message.chat.type
 
     if chat_type == enums.ChatType.PRIVATE:
@@ -498,10 +498,10 @@ async def save_template(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("**Make sure I'm present in your Group!**", quote=True)
+                await message.reply_text("<b>Make sure I'm present in your Group!</b>", quote=True)
                 return
         else:
-            await message.reply_text("**I'm not connected to any Groups!**", quote=True)
+            await message.reply_text("<b>I'm not connected to any Groups!</b>", quote=True)
             return
 
     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
@@ -523,4 +523,4 @@ async def save_template(client, message):
         return await sts.edit("No Input!!")
     template = message.text.split(" ", 1)[1]
     await save_group_settings(grp_id, 'template', template)
-    await sts.edit(f"**Successfully Upgraded Your Template For {title} to\n\n{template}**")
+    await sts.edit(f"<b>Successfully Upgraded Your Template For {title} to\n\n{template}</b>")
