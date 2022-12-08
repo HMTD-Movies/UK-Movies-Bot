@@ -18,26 +18,26 @@ lock = asyncio.Lock()
 async def index_files(bot, query):
     if query.data.startswith('index_cancel'):
         temp.CANCEL = True
-        return await query.answer("Cancelling Indexing")
+        return await query.answer("<b>Cancelling Indexing</b>")
     _, raju, chat, lst_msg_id, from_user = query.data.split("#")
     if raju == 'reject':
         await query.message.delete()
         await bot.send_message(int(from_user),
-                               f'Your Submission for indexing {chat} has been decliened by our moderators.',
+                               f'<b>Your Submission for indexing {chat} has been decliened by our moderators.</b>',
                                reply_to_message_id=int(lst_msg_id))
         return
 
     if lock.locked():
-        return await query.answer('Wait until previous process complete.', show_alert=True)
+        return await query.answer('<b>Wait until previous process complete.</b>', show_alert=True)
     msg = query.message
 
     await query.answer('Processing...⏳', show_alert=True)
     if int(from_user) not in ADMINS:
         await bot.send_message(int(from_user),
-                               f'Your Submission for indexing {chat} has been accepted by our moderators and will be added soon.',
+                               f'<b>Your Submission for indexing {chat} has been accepted by our moderators and will be added soon.</b>',
                                reply_to_message_id=int(lst_msg_id))
     await msg.edit(
-        "Starting Indexing",
+        "<b>Starting Indexing</b>",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton('Cancel', callback_data='index_cancel')]]
         )
@@ -70,16 +70,16 @@ async def send_for_index(bot, message):
     except ChannelInvalid:
         return await message.reply('This may be a private channel / group. Make me an admin over there to index the files.')
     except (UsernameInvalid, UsernameNotModified):
-        return await message.reply('Invalid Link specified.')
+        return await message.reply('<b>Invalid Link specified.</b>')
     except Exception as e:
         logger.exception(e)
-        return await message.reply(f'Errors - {e}')
+        return await message.reply(f'<b>Errors - {e}</b>')
     try:
         k = await bot.get_messages(chat_id, last_msg_id)
     except:
-        return await message.reply('Make Sure That Iam An Admin In The Channel, if channel is private')
+        return await message.reply('<b>Make Sure That Iam An Admin In The Channel, if channel is private</b>')
     if k.empty:
-        return await message.reply('This may be group and iam not a admin of the group.')
+        return await message.reply('<b>This may be Group and I'm not a Admin of the Group.</b>')
 
     if message.from_user.id in ADMINS:
         buttons = [
@@ -93,7 +93,7 @@ async def send_for_index(bot, message):
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
         return await message.reply(
-            f'Do you Want To Index This Channel/ Group ?\n\nChat ID/ Username: <code>{chat_id}</code>\nLast Message ID: <code>{last_msg_id}</code>',
+            f'<b>Do you Want To Index This Channel/ Group ?\n\nChat ID/ Username: <code>{chat_id}</code>\nLast Message ID: <code>{last_msg_id}</code></b>',
             reply_markup=reply_markup)
 
     if type(chat_id) is int:
@@ -128,10 +128,10 @@ async def set_skip_number(bot, message):
             skip = int(skip)
         except:
             return await message.reply("Skip number should be an integer.")
-        await message.reply(f"Successfully set SKIP number as {skip}")
+        await message.reply(f"<b>Successfully set SKIP number as {skip}</b>")
         temp.CURRENT = int(skip)
     else:
-        await message.reply("Give me a skip number")
+        await message.reply("<b>Give me a skip number</b>")
 
 
 async def index_files_to_db(lst_msg_id, chat, msg, bot):
@@ -147,14 +147,14 @@ async def index_files_to_db(lst_msg_id, chat, msg, bot):
             temp.CANCEL = False
             async for message in bot.iter_messages(chat, lst_msg_id, temp.CURRENT):
                 if temp.CANCEL:
-                    await msg.edit(f"Successfully Cancelled!!\n\nSaved <code>{total_files}</code> files to dataBase!\nDuplicate Files Skipped: <code>{duplicate}</code>\nDeleted Messages Skipped: <code>{deleted}</code>\nNon-Media messages skipped: <code>{no_media + unsupported}</code>(Unsupported Media - `{unsupported}` )\nErrors Occurred: <code>{errors}</code>")
+                    await msg.edit(f"<b>Successfully Cancelled!!\n\nSaved <code>{total_files}</code> files to dataBase!\nDuplicate Files Skipped: <code>{duplicate}</code>\nDeleted Messages Skipped: <code>{deleted}</code>\nNon-Media messages skipped: <code>{no_media + unsupported}</code>(Unsupported Media - `{unsupported}` )\nErrors Occurred: <code>{errors}</code></b>")
                     break
                 current += 1
                 if current % 20 == 0:
                     can = [[InlineKeyboardButton('Cancel', callback_data='index_cancel')]]
                     reply = InlineKeyboardMarkup(can)
                     await msg.edit_text(
-                        text=f"Total messages fetched: <code>{current}</code>\nTotal messages saved: <code>{total_files}</code>\nDuplicate Files Skipped: <code>{duplicate}</code>\nDeleted Messages Skipped: <code>{deleted}</code>\nNon-Media messages skipped: <code>{no_media + unsupported}</code>(Unsupported Media - `{unsupported}` )\nErrors Occurred: <code>{errors}</code>",
+                        text=f"<b>Total messages fetched: <code>{current}</code>\nTotal messages saved: <code>{total_files}</code>\nDuplicate Files Skipped: <code>{duplicate}</code>\nDeleted Messages Skipped: <code>{deleted}</code>\nNon-Media messages skipped: <code>{no_media + unsupported}</code>(Unsupported Media - `{unsupported}` )\nErrors Occurred: <code>{errors}</code></b>",
                         reply_markup=reply)
                 if message.empty:
                     deleted += 1
@@ -182,4 +182,4 @@ async def index_files_to_db(lst_msg_id, chat, msg, bot):
             logger.exception(e)
             await msg.edit(f'Error: {e}')
         else:
-            await msg.edit(f'Succesfully saved <code>{total_files}</code> to dataBase!\nDuplicate Files Skipped: <code>{duplicate}</code>\nDeleted Messages Skipped: <code>{deleted}</code>\nNon-Media messages skipped: <code>{no_media + unsupported}</code>(Unsupported Media - `{unsupported}` )\nErrors Occurred: <code>{errors}</code>')
+            await msg.edit(f'<b>Succesfully saved <code>{total_files}</code> to dataBase!\nDuplicate Files Skipped: <code>{duplicate}</code>\nDeleted Messages Skipped: <code>{deleted}</code>\nNon-Media messages skipped: <code>{no_media + unsupported}</code>(Unsupported Media - `{unsupported}` )\nErrors Occurred: <code>{errors}</code></b>')
