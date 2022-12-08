@@ -37,19 +37,19 @@ async def fil_mod(client, message):
       try: 
          args = message.text.split(None, 1)[1].lower() 
       except: 
-         return await message.reply("**Incomplete Command...**")
+         return await message.reply("<b>Incomplete Command...</b>")
       
-      m = await message.reply("**Settings.../**")
+      m = await message.reply("<b>Settings...</b>")
 
       if args in mode_on:
           FILTER_MODE[str(message.chat.id)] = "True" 
-          await m.edit("**Auto Filter Enabled**")
+          await m.edit("<b>Auto Filter Enabled</b>")
       
       elif args in mode_of:
           FILTER_MODE[str(message.chat.id)] = "False"
-          await m.edit("**Auto Filter Enabled**")
+          await m.edit("<b>Auto Filter Enabled</b>")
       else:
-          await m.edit("**USE :- /autofilter on 𝙾𝚁 /autofilter off**")
+          await m.edit("<b>USE :- /autofilter on 𝙾𝚁 /autofilter off</b>")
 
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
@@ -62,14 +62,14 @@ async def give_filter(client, message):
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer("oKda", show_alert=True)
+        return await query.answer("OKda", show_alert=True)
     try:
         offset = int(offset)
     except:
         offset = 0
     search = BUTTONS.get(key)
     if not search:
-        await query.answer("**You are Using one of my old Messages, Please send the Request Again.**", show_alert=True)
+        await query.answer("<b>You are Using one of my old Messages, Please send the Request Again.</b>", show_alert=True)
         return
 
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
@@ -155,12 +155,12 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("**😁 Hey Bro, Please Search Yourself.**", show_alert=True)
+        return await query.answer("😁 Hey Bro, Please Search Yourself.", show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.id)
     if not movies:
-        return await query.answer("**Link Expired Kindly Please Search Again🙂.**", show_alert=True)
+        return await query.answer("Link Expired Kindly Please Search Again🙂.", show_alert=True)
     movie = movies[(int(movie_))]
     await query.answer('Cheaking File on My Database...')
     k = await manual_filters(bot, query.message, text=movie)
@@ -201,27 +201,27 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     chat = await client.get_chat(grpid)
                     title = chat.title
                 except:
-                    await query.message.edit_text("**Make sure I'm present in your group!!**", quote=True)
-                    return await query.answer('Share and Support us ❤️')
+                    await query.message.edit_text("<b>Make sure I'm present in your Group!!<b>", quote=True)
+                    return await query.answer('Share and Support us')
             else:
                 await query.message.edit_text(
                     "**I'm not connected to any groups!\nCheck /connections or connect to any groups**",
                     quote=True
                 )
-                return await query.answer('Share and Support us ❤️')
+                return await query.answer('Share and Support us')
 
         elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
             grp_id = query.message.chat.id
             title = query.message.chat.title
 
         else:
-            return await query.answer('**Piracy Is Crime**')
+            return await query.answer('Piracy Is Crime')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == enums.ChatMemberStatus.OWNER) or (str(userid) in ADMINS):
             await del_all(query.message, grp_id, title)
         else:
-            await query.answer("**You need to be Group Owner or an Auth User to do that!**", show_alert=True)
+            await query.answer("You need to be Group Owner or an Auth User to do that!", show_alert=True)
     elif query.data == "delallcancel":
         userid = query.from_user.id
         chat_type = query.message.chat.type
@@ -240,7 +240,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 except:
                     pass
             else:
-                await query.answer("**Buddy Don't Touch Others Property 😁**", show_alert=True)
+                await query.answer("Buddy Don't Touch Others Property 😁", show_alert=True)
     elif "groupcb" in query.data:
         await query.answer()
 
@@ -265,11 +265,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ])
 
         await query.message.edit_text(
-            f"**Group Name :-** **{title}**\n**Group ID :-** `{group_id}`",
+            f"<b>Group Name :- {title}\nGroup ID :- `{group_id}`</b>",
             reply_markup=keyboard,
             parse_mode=enums.ParseMode.MARKDOWN
         )
-        return await query.answer('**Piracy Is Crime**')
+        return await query.answer('Piracy Is Crime')
     elif "connectcb" in query.data:
         await query.answer()
 
@@ -285,11 +285,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if mkact:
             await query.message.edit_text(
-                f"**Connect to {title}**",
+                f"<b>Connect to {title}</b>",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
         else:
-            await query.message.edit_text('**Some error occurred!!**', parse_mode=enums.ParseMode.MARKDOWN)
+            await query.message.edit_text('<b>Some error occurred!!</b>', parse_mode=enums.ParseMode.MARKDOWN)
         return await query.answer('Share and Support us')
     elif "disconnect" in query.data:
         await query.answer()
@@ -305,12 +305,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if mkinact:
             await query.message.edit_text(
-                f"**Disconnect From {title}**",
+                f"<b>Disconnect From {title}</b>",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
         else:
             await query.message.edit_text(
-                f"**Some error occurred!!**",
+                f"<b>Some error occurred!!</b>",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
         return await query.answer('Share and Support us')
@@ -324,11 +324,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if delcon:
             await query.message.edit_text(
-                "**Successfully deleted Connection**"
+                "<b>Successfully deleted Connection</b>"
             )
         else:
             await query.message.edit_text(
-                f"**Some error occurred!!**",
+                f"<b>Some error occurred!!</b>",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
         return await query.answer('Share and Support us')
@@ -340,7 +340,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         groupids = await all_connections(str(userid))
         if groupids is None:
             await query.message.edit_text(
-                "**There are no active connections!! Connect to some groups first.**",
+                "<b>There are no active connections!! Connect to some groups first.</b>",
             )
             return await query.answer('Share and Support us')
         buttons = []
@@ -361,7 +361,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 pass
         if buttons:
             await query.message.edit_text(
-                "**Your connected group details ;\n\n**",
+                "<b>Your connected group details ;\n\n</b>",
                 reply_markup=InlineKeyboardMarkup(buttons)
             )
     elif "alertmessage" in query.data:
@@ -378,7 +378,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
         if not files_:
-            return await query.answer('**No such file exist.**')
+            return await query.answer('No such file exist.')
         files = files_[0]
         title = files.file_name
         size = get_size(files.file_size)
@@ -409,21 +409,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     caption=f_caption,
                     protect_content=True if ident == "filep" else False 
                 )
-                await query.answer('**Check PM, I have sent files in pm**', show_alert=True)
+                await query.answer('Check PM, I have sent files in PM', show_alert=True)
         except UserIsBlocked:
-            await query.answer('**You Are Blocked to use me!**', show_alert=True)
+            await query.answer('You Are Blocked to use me!', show_alert=True)
         except PeerIdInvalid:
             await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start={ident}_{file_id}")
         except Exception as e:
             await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start={ident}_{file_id}")
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("**I Like Your Smartness, But Don't Be Oversmart Okay 😒**", show_alert=True)
+            await query.answer("I Like Your Smartness, But Don't Be Oversmart Okay 😒", show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
         if not files_:
-            return await query.answer('**No such file exist.**')
+            return await query.answer('No such file exist.')
         files = files_[0]
         title = files.file_name
         size = get_size(files.file_size)
@@ -463,7 +463,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-        await query.answer('𝙿𝙻𝙴𝙰𝚂𝙴 𝚂𝙷𝙰𝚁𝙴 𝙰𝙽𝙳 𝚂𝚄𝙿𝙿𝙾𝚁𝚃')
+        await query.answer('Share and Support us')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('Manuel Filter', callback_data='manuelfilter'),
@@ -798,7 +798,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name.")
+        k = await msg.reply("<b>I couldn't find any movie in that name.</b>")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -839,7 +839,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
+    await msg.reply("<b>I couldn't find anything related to that\nDid you mean any one of these?</b>",
                     reply_markup=InlineKeyboardMarkup(btn))
 
 
