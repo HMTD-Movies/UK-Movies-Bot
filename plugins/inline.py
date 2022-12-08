@@ -33,8 +33,8 @@ async def answer(bot, query):
     if AUTH_CHANNEL and not await is_subscribed(bot, query):
         await query.answer(results=[],
                            cache_time=0,
-                           switch_pm_text='**You have to Subscribe My Channel to use the Bot**',
-                           switch_pm_parameter="**Subscribe**")
+                           switch_pm_text='<b>You have to Subscribe My Channel to use the Bot</b>',
+                           switch_pm_parameter="<b>Subscribe</b>")
         return
 
     results = []
@@ -70,11 +70,11 @@ async def answer(bot, query):
                 title=file.file_name,
                 document_file_id=file.file_id,
                 caption=f_caption,
-                description=f'**Size: {get_size(file.file_size)}\nType: {file.file_type}**',
+                description=f'Size: {get_size(file.file_size)}\nType: {file.file_type}',
                 reply_markup=reply_markup))
 
     if results:
-        switch_pm_text = f"**{emoji.FILE_FOLDER} Results - {total}**"
+        switch_pm_text = f"{emoji.FILE_FOLDER} Results - {total}"
         if string:
             switch_pm_text += f" for {string}"
         try:
@@ -91,7 +91,7 @@ async def answer(bot, query):
     else:
         switch_pm_text = f'{emoji.CROSS_MARK} No results'
         if string:
-            switch_pm_text += f' for "**{string}**"'
+            switch_pm_text += f' for "{string}"'
 
         await query.answer(results=[],
                            is_personal = True,
