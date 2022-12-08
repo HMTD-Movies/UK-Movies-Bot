@@ -55,7 +55,7 @@ async def send_for_index(bot, message):
         regex = re.compile("(https://)?(t\.me/|telegram\.me/|telegram\.dog/)(c/)?(\d+|[a-zA-Z_0-9]+)/(\d+)$")
         match = regex.match(message.text)
         if not match:
-            return await message.reply('Invalid link')
+            return await message.reply('<b>Invalid link</b>')
         chat_id = match.group(4)
         last_msg_id = int(match.group(5))
         if chat_id.isnumeric():
@@ -79,7 +79,7 @@ async def send_for_index(bot, message):
     except:
         return await message.reply('<b>Make Sure That Iam An Admin In The Channel, if channel is private</b>')
     if k.empty:
-        return await message.reply('This may be Group and I am not a Admin of the Group.')
+        return await message.reply('<b>This may be Group and I am not a Admin of the Group.</b>')
 
     if message.from_user.id in ADMINS:
         buttons = [
@@ -100,7 +100,7 @@ async def send_for_index(bot, message):
         try:
             link = (await bot.create_chat_invite_link(chat_id)).invite_link
         except ChatAdminRequired:
-            return await message.reply('Make sure iam an admin in the chat and have permission to invite users.')
+            return await message.reply('<b>Make sure I am an admin in the chat and have permission to invite users.</b>')
     else:
         link = f"@{message.forward_from_chat.username}"
     buttons = [
