@@ -69,7 +69,7 @@ async def next_page(bot, query):
         offset = 0
     search = BUTTONS.get(key)
     if not search:
-        await query.answer("<b>You are Using one of my old Messages, Please send the Request Again.</b>", show_alert=True)
+        await query.answer("You are Using one of my old Messages, Please send the Request Again.", show_alert=True)
         return
 
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
@@ -205,7 +205,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     return await query.answer('Share and Support us')
             else:
                 await query.message.edit_text(
-                    "**I'm not connected to any groups!\nCheck /connections or connect to any groups**",
+                    "<b>I'm not connected to any groups!\nCheck /connections or connect to any Groups</b>",
                     quote=True
                 )
                 return await query.answer('Share and Support us')
@@ -581,7 +581,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "rfrsh":
-        await query.answer("**Fetching MongoDb DataBase**")
+        await query.answer("Fetching MongoDb DataBase")
         buttons = [[
             InlineKeyboardButton('⬅️ Back', callback_data='help'),
             InlineKeyboardButton('🔄 Refresh', callback_data='rfrsh')
@@ -604,8 +604,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         grpid = await active_connection(str(query.from_user.id))
 
         if str(grp_id) != str(grpid):
-            await query.message.edit("**Your Active Connection Has Been Changed. Go To /settings.**")
-            return await query.answer('Share and Support us ❤️')
+            await query.message.edit("<b>Your Active Connection Has Been Changed. Go To /settings.</b>")
+            return await query.answer('Share and Support us')
 
         if status == "True":
             await save_group_settings(grpid, set_type, False)
@@ -652,7 +652,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
-    await query.answer('𝙿𝙻𝙴𝙰𝚂𝙴 𝚂𝙷𝙰𝚁𝙴 𝙰𝙽𝙳 𝚂𝚄𝙿𝙿𝙾𝚁𝚃')
+    await query.answer('Share and Support us')
 
 
 async def auto_filter(client, msg, spoll=False):
@@ -827,7 +827,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("**I couldn't find anything related to that. Check your spelling**")
+        k = await msg.reply("<b>I couldn't find anything Related to that. Check your Spelling</b>")
         await asyncio.sleep(8)
         await k.delete()
         return
