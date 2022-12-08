@@ -285,7 +285,7 @@ async def channel_info(bot, message):
 
 @Client.on_message(filters.command('logs') & filters.user(ADMINS))
 async def log_file(bot, message):
-    ""<b>Send Log File 📂</b>"""
+    ""Send Log File 📂"""
     try:
         await message.reply_document('TelegramBot.log')
     except Exception as e:
