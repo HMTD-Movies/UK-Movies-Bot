@@ -29,10 +29,10 @@ async def addfilter(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("Make sure I'm present in your group!!", quote=True)
+                await message.reply_text("<b>Make sure I'm Present in your Group!!</b>", quote=True)
                 return
         else:
-            await message.reply_text("I'm not connected to any groups!", quote=True)
+            await message.reply_text("<b>I'm not Connected to any Groups!</b>", quote=True)
             return
 
     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
@@ -52,21 +52,21 @@ async def addfilter(client, message):
 
 
     if len(args) < 2:
-        await message.reply_text("Command Incomplete :(", quote=True)
+        await message.reply_text("<b>Command Incomplete :(</b>", quote=True)
         return
 
     extracted = split_quotes(args[1])
     text = extracted[0].lower()
 
     if not message.reply_to_message and len(extracted) < 2:
-        await message.reply_text("**Add some Content to Save Your Filter!**", quote=True)
+        await message.reply_text("<b>Add some Content to Save Your Filter!</b>", quote=True)
         return
 
     if (len(extracted) >= 2) and not message.reply_to_message:
         reply_text, btn, alert = parser(extracted[1], text)
         fileid = None
         if not reply_text:
-            await message.reply_text("**You cannot have Buttons alone, Give some Text to go With it!**", quote=True)
+            await message.reply_text("<b>You cannot have Buttons alone, Give some Text to go With it!</b>", quote=True)
             return
 
     elif message.reply_to_message and message.reply_to_message.reply_markup:
@@ -110,7 +110,7 @@ async def addfilter(client, message):
     await add_filter(grp_id, text, reply_text, btn, fileid, alert)
 
     await message.reply_text(
-        f"**Filter for  `{text}`  added in** **{title}**",
+        f"<b>Filter for  `{text}`  added in {title}</b>",
         quote=True,
         parse_mode=enums.ParseMode.MARKDOWN
     )
@@ -122,7 +122,7 @@ async def get_all(client, message):
     chat_type = message.chat.type
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
+        return await message.reply(f"<b>You are Anonymous Admin. Use /connect {message.chat.id} in PM</b>")
     if chat_type == enums.ChatType.PRIVATE:
         grpid = await active_connection(str(userid))
         if grpid is not None:
@@ -131,10 +131,10 @@ async def get_all(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("Make sure I'm present in your group!!", quote=True)
+                await message.reply_text("<b>Make sure I'm present in your Group!!</b>", quote=True)
                 return
         else:
-            await message.reply_text("I'm not connected to any groups!", quote=True)
+            await message.reply_text("<b>I'm not Connected to any Groups!</b>", quote=True)
             return
 
     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
@@ -171,7 +171,7 @@ async def get_all(client, message):
                 )
             return
     else:
-        filterlist = f"**There are no Active Filters in {title}**"
+        filterlist = f"<b>There are no Active Filters in {title}</b>"
 
     await message.reply_text(
         text=filterlist,
@@ -194,10 +194,10 @@ async def deletefilter(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("Make sure I'm present in your group!!", quote=True)
+                await message.reply_text("<b>Make sure I'm Present in your Group!!</b>", quote=True)
                 return
         else:
-            await message.reply_text("**I'm not Connected to any Groups!**", quote=True)
+            await message.reply_text("<b>I'm not Connected to any Groups!</b>", quote=True)
             return
 
     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
@@ -221,7 +221,7 @@ async def deletefilter(client, message):
         await message.reply_text(
             "<b>Mention the filtername which You wanna Delete!</b>\n\n"
             "<code>/del filtername</code>\n\n"
-            "**Use /viewfilters to View all Available Filters**",
+            "<b>Use /viewfilters to View all Available Filters</b>",
             quote=True
         )
         return
@@ -235,7 +235,7 @@ async def deletefilter(client, message):
 async def delallconfirm(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
+        return await message.reply(f"<b>You are Anonymous Admin. Use /connect {message.chat.id} in PM</b>")
     chat_type = message.chat.type
 
     if chat_type == enums.ChatType.PRIVATE:
@@ -246,10 +246,10 @@ async def delallconfirm(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("**Make sure I'm Present in your Group!**", quote=True)
+                await message.reply_text("<b>Make sure I'm Present in your Group!</b>", quote=True)
                 return
         else:
-            await message.reply_text("**I'm not Connected to any Groups!**", quote=True)
+            await message.reply_text("<b>I'm not Connected to any Groups!</b>", quote=True)
             return
 
     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
@@ -263,7 +263,7 @@ async def delallconfirm(client, message):
     st = await client.get_chat_member(grp_id, userid)
     if (st.status == enums.ChatMemberStatus.OWNER) or (str(userid) in ADMINS):
         await message.reply_text(
-            f"**This will Delete all Filters from '{title}'.\nDo you Want to Continue...??**",
+            f"<b>This will Delete all Filters from '{title}'.\nDo you Want to Continue...??</b>",
             reply_markup=InlineKeyboardMarkup([
                 [InlineKeyboardButton(text="Yes",callback_data="delallconfirm")],
                 [InlineKeyboardButton(text="Cancel",callback_data="delallcancel")]
