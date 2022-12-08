@@ -170,7 +170,7 @@ async def gen_invite(bot, message):
         return await message.reply("<b>Invite Link Generation Failed, Iam Not Having Sufficient Rights</b>")
     except Exception as e:
         return await message.reply(f'<b>Error {e}</b>')
-    await message.reply(f'**Here is your Invite Link {link.invite_link}**')
+    await message.reply(f'<b>Here is your Invite Link {link.invite_link}</b>')
 
 @Client.on_message(filters.command('ban') & filters.user(ADMINS))
 async def ban_a_user(bot, message):
