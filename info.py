@@ -45,13 +45,13 @@ SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>[www.HMTDMovies.tk](http://www.HMTDMovies.tk) - {file_caption}\n\n📢 Update Channel :-\n[UK Movies Zone (Updates)](https://t.me/UK_Movies_Zone_Updates)\n\n🔥 Powered By :-\n[UK Studios Official](https://t.me/UK_Studios_Official)\n[HMTD Links](https://t.me/HMTD_Links)</b>")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "<b>[www.HMTDMovies.tk](http://www.HMTDMovies.tk) - {file_caption}\n\n📢 Update Channel :-\n[UK Movies Zone (Updates)](https://t.me/UK_Movies_Zone_Updates)\n\n🔥 Powered By :-\n[UK Studios Official](https://t.me/UK_Studios_Official)\n[HMTD Links](https://t.me/HMTD_Links)</b>")
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>🎥 Movie :-  {title}\n\n🎭 Genres :- {genres}\n\n🎙️ Language :- {languages}\n\n🌟 IMDB Rating :- {rating}\n\n📆 Released :- {year}\n\n⏰ Duration :- {runtime}\n\n🗳️ Votes :- {votes}\n\n💰 Box office :- {box_office}\n\n🕺 Director :- {directory}\n\n🧑‍💻 Writer :- {writer}\n\n🗺️ Countries :- {countries}\n\n📖 Story Line :- {plot}\n\n📢 Update Channel :-\n@UK_Movies_Zone_Updates\n\n🔥 Powered By :-\n@UK_Studios_Official\n@HMTD_Links\n\n🌐 Our Website :- www.HMTDMovies.tk</b>")
-LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), True)
+LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "True"), True)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', '-1001797626445'))
 FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
-PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), True)
+PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "True")), True)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), True)
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
