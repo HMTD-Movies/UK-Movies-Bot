@@ -49,7 +49,11 @@ class Bot(Client):
 
 async def web_server():
     web_app = web.Application(cilent_max_size=30000000)
-    web_app.add_routes(
+    web_app.add_routes(routes)
+    return web_app
+
+routes = web.RouteTableDef()
+@r
 
 
 
