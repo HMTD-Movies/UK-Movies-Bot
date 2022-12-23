@@ -53,9 +53,9 @@ async def web_server():
     return web_app
 
 routes = web.RouteTableDef()
-@r
-
-
+@routes.get("/", allow_head=True)
+async def root_route_handler(request):
+    return web.json_response("testbot")
 
 
     async def stop(self, *args):
