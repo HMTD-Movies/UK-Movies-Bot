@@ -28,7 +28,7 @@ async def index_files(bot, query):
         return
 
     if lock.locked():
-        return await query.answer('<b>Wait until previous process complete.</b>', show_alert=True)
+        return await query.answer('Wait until previous process complete.', show_alert=True)
     msg = query.message
 
     await query.answer('Processing...⏳', show_alert=True)
