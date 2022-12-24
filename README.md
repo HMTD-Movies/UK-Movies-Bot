@@ -1,4 +1,4 @@
-## • What's New ?
+https://telegra.ph/file/0cc81f5c4df05837d8b05.jpg## • What's New ?
 
 - ⟴ URL Shortener Added
 - ⟴ Self Delete Added (Auto delete)
@@ -13,10 +13,10 @@
 
 
 <p align="center">
-  <img src="https://github.com/GreyMattersBot/url-auto-delete-shortener-bot/blob/main/assets/IMG_20220105_010453-removebg-preview.png" alt="GreyMatter's Bot Logo">
+  <img src="https://github.com/HMTD-Movies/UK-Movies-Bot/blob/main/assets/IMG_20221224_073420_677.jpg" alt="UK Movies Bot Logo">
 </p>
 <h1 align="center">
-  <b>GreyMatter's Bot</b>
+  <b>UK Movies Bot</b>
 </h1>
 
 
