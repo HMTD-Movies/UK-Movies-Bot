@@ -1,4 +1,4 @@
-https://telegra.ph/file/0cc81f5c4df05837d8b05.jpg## • What's New ?
+## • What's New ?
 
 - ⟴ URL Shortener Added
 - ⟴ Self Delete Added (Auto delete)
