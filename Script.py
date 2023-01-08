@@ -103,10 +103,10 @@ Create One Link This :
 • /unban  - to unban a user.
 • /channel - to get list of total connected channels
 • /broadcast - to broadcast a message to all users</b>"""
-    STATUS_TXT = """<b>🗃️ Total Files :</b> <code>{}</code> <b>Files</b>
-<b>👩🏻‍💻 Total Users :</b> <code>{}</code> <b>Users</b>
-<b>👥 Total Groups :</b> <code>{}</code> <b>Groups</b>
-<b>💾 Used Storage :</b> <code>{}</code>
+    STATUS_TXT = """<b>🗃️ Total Files :</b> <code>{}</code> <b>Files</b>\n
+<b>👩🏻‍💻 Total Users :</b> <code>{}</code> <b>Users</b>\n
+<b>👥 Total Groups :</b> <code>{}</code> <b>Groups</b>\n
+<b>💾 Used Storage :</b> <code>{}</code>\n
 <b>🆓 Free Storage :</b> <code>{}</code>"""
     LOG_TEXT_G = """<b>#New_Group</b>
     
