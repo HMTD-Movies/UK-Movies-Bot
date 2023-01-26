@@ -11,7 +11,7 @@ def is_enabled(value, default):
         return default
 
 class script(object):
-    HOME_BUTTONURL_UPDATES = environ.get("HOME_BUTTONURL_UPDATES", 'https://droplink.co/ref/KarthikUK')
+    HOME_BUTTONURL_UPDATES = environ.get("HOME_BUTTONURL_UPDATES", 'https://tnlink.in/ref/KarthikUK')
     START_TXT = environ.get("START_TXT", '''<b>Hello 👋🏻 {} ♥️,\nI'm an Star Movies Tamil's Official Auto Filter Bot (Movie Search Bot) Maintained by <a href=https://t.me/Star_Moviess_Tamil><b></b>Star Movies Tamil</a>. We are Providing Tamil and Tamil Dubbed Movies. More Languages Coming Soon. Keep me Join to Our Official Channel to Receive Bot & Movies Updates in <a href=https://t.me/Star_Moviess_Tamil><b></b>Star Movies Tamil</a>. Check "😁 About" Button.</b>''')
     HELP_TXT = """<b>Hello 👋🏻 {},
 I have that Features.
