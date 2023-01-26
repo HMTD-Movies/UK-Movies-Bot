@@ -451,8 +451,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('©️ Add me to Your Group', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('💰 Earn Money', url='https://droplink.co/ref/KarthikUK'),
-            InlineKeyboardButton('📢 Update Channel', url='https://t.me/UK_Movies_Zone_Updates')
+            InlineKeyboardButton('💰 Earn Money', url='https://tnlink.in/ref/KarthikUK'),
+            InlineKeyboardButton('📢 Update Channel', url='https://t.me/Star_Moviess_Tamil')
         ], [
             InlineKeyboardButton('😎 Help', callback_data='help'),
             InlineKeyboardButton('😁 About', callback_data='about')
