@@ -23,10 +23,10 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('📢 Update Channel', url='https://t.me/UK_Movies_Zone_Updates')
+                InlineKeyboardButton('📢 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ],
             [
-                InlineKeyboardButton('💰 Earn Money', url=f"https://droplink.co/ref/KarthikUK"),
+                InlineKeyboardButton('💰 Earn Money', url=f"https://tnlink.in/ref/KarthikUK"),
             ],
             [
                 InlineKeyboardButton(text=DOWNLOAD_TEXT_NAME,url=DOWNLOAD_TEXT_URL)
@@ -47,8 +47,8 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('©️ Add me to Your Group', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('💰 Earn Money' , url='https://droplink.co/ref/KarthikUK'),
-            InlineKeyboardButton('📢 Update Channel', url='https://t.me/UK_Movies_Zone_Updates')
+            InlineKeyboardButton('💰 Earn Money' , url='https://tnlink.in/ref/KarthikUK'),
+            InlineKeyboardButton('📢 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ],[
             InlineKeyboardButton('😎 Help', callback_data='help'),
             InlineKeyboardButton('😁 About', callback_data='about')
@@ -93,8 +93,8 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('©️ Add me to Your Group', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('💰 Earn Money', url='https://droplink.co/ref/KarthikUK'),
-            InlineKeyboardButton('📢 Update Channel', url='https://t.me/UK_Movies_Zone_Updates')
+            InlineKeyboardButton('💰 Earn Money', url='https://tnlink.in/ref/KarthikUK'),
+            InlineKeyboardButton('📢 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ],[
             InlineKeyboardButton('😎 Help', callback_data='help'),
             InlineKeyboardButton('😁 About', callback_data='about')
