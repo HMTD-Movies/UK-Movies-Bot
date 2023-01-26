@@ -12,19 +12,18 @@ def is_enabled(value, default):
 
 class script(object):
     HOME_BUTTONURL_UPDATES = environ.get("HOME_BUTTONURL_UPDATES", 'https://droplink.co/ref/KarthikUK')
-    START_TXT = environ.get("START_TXT", '''<b>Hello 👋🏻 {},\nI'm an UK Movies Official Auto Filter Bot (Movie Search Bot) Maintained by <a href=https://t.me/UK_Movies_Zone_Updates><b></b>UK Movies Zone (Updates)</a>. We are Providing Tamil and Tamil Dubbed Movies. More Languages Coming Soon. I Can Support Upto 4GB File. You Can Get added Files GDrive Links and 4GB above Links also. You Can Get GDrive Links in <a href=http://www.HMTDMovies.tk><b></b>www.HMTDMovies.tk</a>. Keep me Join to Our Official Channel to Receive Bot & Movies Updates in <a href=https://t.me/UK_Movies_Zone_Updates><b></b>UK Movies Zone (Updates)</a>. Check "😁 About" Button.</b>''')
+    START_TXT = environ.get("START_TXT", '''<b>Hello 👋🏻 {} ♥️,\nI'm an Star Movies Tamil's Official Auto Filter Bot (Movie Search Bot) Maintained by <a href=https://t.me/Star_Moviess_Tamil><b></b>Star Movies Tamil</a>. We are Providing Tamil and Tamil Dubbed Movies. More Languages Coming Soon. Keep me Join to Our Official Channel to Receive Bot & Movies Updates in <a href=https://t.me/Star_Moviess_Tamil><b></b>Star Movies Tamil</a>. Check "😁 About" Button.</b>''')
     HELP_TXT = """<b>Hello 👋🏻 {},
 I have that Features.
 Create One Link This :
 » I will Create For One Bot You. But Paid
 » Contact Me <a href=https://t.me/HMTD_Karthik><b>Karthik</b></a></b>"""
-    ABOUT_TXT = """<b><i>🤖 My Name : <a href=https://t.me/UK_Movies_Bot><b>UK Movies Bot</b></a>\n
+    ABOUT_TXT = """<b><i>🤖 My Name : <a href=https://t.me/Star_Moviess_Bot><b>Star Movies Bot</b></a>\n
 🧑🏻‍💻 Developer : <a href=https://t.me/HMTD_Karthik><b>Karthik</b></a>\n
 📝 Language : Pyrogram\n
 📚 Framework : Python3\n
 📡 Hosted on : VPS\n
-📢 Updates Channel : <a href=https://t.me/UK_Movies_Zone_Updates><b></b>UK Movies Zone (Updates)</a>\n
-🌐 Website : <a href=http://www.HMTDMovies.tk><b></b>www.HMTDMovies.tk</a>\n</b></i>"""
+📢 Updates Channel : <a href=https://t.me/Star_Moviess_Tamil><b></b>Star Movies Tamil</a>\n</b></i>"""
     SOURCE_TXT = """<b>Create One Like This :</b>
 » I will Create One Bot For You. But Paid<b>
 » Contact Me</b> <a href=https://t.me/HMTD_Karthik><b>Karthik</b></a>"""
