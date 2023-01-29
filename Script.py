@@ -17,16 +17,16 @@ class script(object):
 I have that Features.
 Create One Link This :
 » I will Create For One Bot You. But Paid
-» Contact Me <a href=https://t.me/HMTD_Karthik><b>Karthik</b></a></b>"""
+» Contact Me <a href=https://t.me/Star_Movies_Karthik><b>Karthik</b></a></b>"""
     ABOUT_TXT = """<b><i>🤖 My Name : <a href=https://t.me/Star_Moviess_Bot><b>Star Movies Bot</b></a>\n
-🧑🏻‍💻 Developer : <a href=https://t.me/HMTD_Karthik><b>Karthik</b></a>\n
+🧑🏻‍💻 Developer : <a href=https://t.me/Star_Movies_Karthik><b>Karthik</b></a>\n
 📝 Language : Pyrogram\n
 📚 Framework : Python3\n
 📡 Hosted on : VPS\n
 📢 Updates Channel : <a href=https://t.me/Star_Moviess_Tamil><b></b>Star Movies Tamil</a>\n</b></i>"""
     SOURCE_TXT = """<b>Create One Like This :</b>
 » I will Create One Bot For You. But Paid<b>
-» Contact Me</b> <a href=https://t.me/HMTD_Karthik><b>Karthik</b></a>"""
+» Contact Me</b> <a href=https://t.me/Star_Movies_Karthik><b>Karthik</b></a>"""
     MANUELFILTER_TXT = """<b>Help :</b> <b>Filters</b>
 
 <b>- Filter is the feature were users can set automated replies for a particular keyword and Search Bot will respond whenever a keyword is found the message</b>
