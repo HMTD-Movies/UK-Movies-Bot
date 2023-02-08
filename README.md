@@ -10,6 +10,9 @@
 - ⟴ Custom URL Buttons (Updates channel, Add To Group, Force Sub, More...)
 
 
+<p align="center">
+<a href="https://github.com/HMTD-Movies/UK-Movies-Bot/actions/workflows/quality.yml"><img src="https://github.com/HMTD-Movies/UK-Movies-Bot/actions/workflows/quality.yml/badge.svg" alt="Code Quality"></a>
+</p>
 
 
 <p align="center">
