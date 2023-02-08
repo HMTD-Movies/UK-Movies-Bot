@@ -98,6 +98,7 @@ python3 bot.py
 
 ## Commands
 ```
+start - Check if 😊 I'm Alive
 logs - to get the rescent errors
 stats - to get status of files in db.
 filter - add manual filters
