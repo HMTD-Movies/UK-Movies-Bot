@@ -18,7 +18,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "5777457260:AAEfAMULHIjj7P__22qSvoT9ygR-u2i
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1000))
-USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
+USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/0cc81f5c4df05837d8b05.jpg')).split()
 
 # Admins, Channels & Users
@@ -72,10 +72,10 @@ URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'droplink.co')
 URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '1d85e33efc4969b36e0f6c0a017aaaefd8accccc')
 
      # Auto Delete For Group Message (Self Delete) #
-SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 60))
-SELF_DELETE = environ.get('SELF_DELETE', False)
-if SELF_DELETE == "False":
-    SELF_DELETE = False
+SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 300))
+SELF_DELETE = environ.get('SELF_DELETE', True)
+if SELF_DELETE == "True":
+    SELF_DELETE = True
 
     # Download Tutorial Button #
 DOWNLOAD_TEXT_NAME = "📥 HOW TO DOWNLOAD 📥"
